@@ -5,6 +5,7 @@
             "identifier": "PostgreSQLService",
             "name": "PostgreSQLService",
             "exportName": "PostgreSQLService",
+            "model": {"@": "Model"},
             "mappings": [
                 {"@": "TimeZoneMapping"},
                 {"@": "DataObjectMapping"},

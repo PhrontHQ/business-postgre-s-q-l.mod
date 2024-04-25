@@ -17,7 +17,8 @@
     "url": "PhrontHQ/business-data-postgre-s-q-l-mod"
   },
   "dependencies": {
-    "montage": "github:PhrontHQ/montage#mod"
+    "montage": "github:PhrontHQ/montage#mod",
+    "business-data-mod": "github:PhrontHQ/business-data-mod#main"
   },
   "devDependencies": {
   },

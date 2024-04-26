@@ -35,10 +35,10 @@
     },
 
     "DataObjectDescriptor": {
-        "object": "../model/data-object.mjson"
+        "object": "montage/data/model/data-object.mjson"
     },
 
     "string-to-date-converter": {
-        "prototype": "../converter/i-s-o-date-string-to-date-converter"
+        "prototype": "montage/core//converter/i-s-o-date-string-to-date-converter
     }
 }

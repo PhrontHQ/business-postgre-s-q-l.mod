@@ -211,7 +211,7 @@
     },
 
     "ISODateStringToDateConverter": {
-        "prototype": "../converter/i-s-o-date-string-to-date-converter"
+        "prototype": "montage/core//converter/i-s-o-date-string-to-date-converter
     },
 
     "participationStatusLogConverter": {

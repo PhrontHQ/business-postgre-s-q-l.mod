@@ -18,7 +18,7 @@
   },
   "dependencies": {
     "montage": "github:PhrontHQ/montage#mod",
-    "phront": "github:PhrontHQ/phront#main"
+    "business-data.mod": "github:PhrontHQ/business-data.mod#main"
   },
   "devDependencies": {
   },

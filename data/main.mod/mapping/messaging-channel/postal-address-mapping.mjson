@@ -55,7 +55,7 @@
     },
 
     "PostalAddressDescriptor": {
-        "object": "../../model/messaging-channel/postal-address.mjson"
+        "object": "business-data.mod/data/main.mod/model/messaging-channel/postal-address.mjson"
     },
 
     "timeZoneConverter": {

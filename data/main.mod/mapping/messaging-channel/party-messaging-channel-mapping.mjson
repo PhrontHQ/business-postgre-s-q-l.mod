@@ -63,7 +63,7 @@
     },
 
     "PartyMessagingChannelDescriptor": {
-        "object": "../../model/messaging-channel/party-messaging-channel.mjson"
+        "object": "business-data.mod/data/main.mod/model/messaging-channel/party-messaging-channel.mjson"
     },
 
     "personPartyForeignKeyMapping": {
@@ -74,7 +74,7 @@
         }
     },
     "PersonDescriptor": {
-        "object": "../../model/person.mjson"
+        "object": "business-data.mod/data/main.mod/model/person.mjson"
     },
 
     "organizationPartyForeignKeyMapping": {
@@ -85,7 +85,7 @@
         }
     },
     "OrganizationDescriptor": {
-        "object": "../../model/organization.mjson"
+        "object": "business-data.mod/data/main.mod/model/organization.mjson"
     },
 
     "resourcePartyForeignKeyMapping": {
@@ -96,7 +96,7 @@
         }
     },
     "ResourceDescriptor": {
-        "object": "../../model/resource.mjson"
+        "object": "business-data.mod/data/main.mod/model/resource.mjson"
     },
 
     "employmentPositionStaffingPartyForeignKeyMapping": {
@@ -107,7 +107,7 @@
         }
     },
     "EmploymentPositionStaffingDescriptor": {
-        "object": "../../model/employment-position-staffing.mjson"
+        "object": "business-data.mod/data/main.mod/model/employment-position-staffing.mjson"
     },
 
     "b2cCustomerSupplierRelationshipDescriptorForeignKeyMapping": {
@@ -118,7 +118,7 @@
         }
     },
     "B2CCustomerSupplierRelationshipDescriptor": {
-        "object": "../../model/b-2-c-customer-supplier-relationship.mjson"
+        "object": "business-data.mod/data/main.mod/model/b-2-c-customer-supplier-relationship.mjson"
     },
 
     "partyConverter": {

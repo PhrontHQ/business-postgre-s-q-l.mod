@@ -23,7 +23,7 @@
     },
 
     "ContactFormDescriptor": {
-        "object": "../../model/messaging-channel/contact-form.mjson"
+        "object": "business-data.mod/data/main.mod/model/messaging-channel/contact-form.mjson"
     },
 
     "embedded-value-converter": {

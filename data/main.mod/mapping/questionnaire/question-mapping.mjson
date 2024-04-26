@@ -35,7 +35,7 @@
     },
 
     "QuestionDescriptor": {
-        "object": "../../model/questionnaire/question.mjson"
+        "object": "business-data.mod/data/main.mod/model/questionnaire/question.mjson"
     },
 
     "superQuestionIdForeignKeyConverter": {

@@ -40,7 +40,7 @@
     },
 
     "AnswerDescriptor": {
-        "object": "../../model/questionnaire/answer.mjson"
+        "object": "business-data.mod/data/main.mod/model/questionnaire/answer.mjson"
     },
     "respondentQuestionnaireAnswersConverter": {
         "prototype": "montage/data/converter/raw-foreign-value-to-object-converter",

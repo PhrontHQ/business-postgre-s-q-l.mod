@@ -17,6 +17,6 @@
     },
 
     "PartySMSNumberDescriptor": {
-        "object": "../../model/messaging-channel/party-s-m-s-number.mjson"
+        "object": "business-data.mod/data/main.mod/model/messaging-channel/party-s-m-s-number.mjson"
     }
 }

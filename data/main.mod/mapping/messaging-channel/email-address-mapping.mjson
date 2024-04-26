@@ -19,6 +19,6 @@
     },
 
     "EmailAddressDescriptor": {
-        "object": "../../model/messaging-channel/email-address.mjson"
+        "object": "business-data.mod/data/main.mod/model/messaging-channel/email-address.mjson"
     }
 }

@@ -18,7 +18,8 @@
   },
   "dependencies": {
     "montage": "github:PhrontHQ/montage#mod",
-    "business-data.mod": "github:PhrontHQ/business-data.mod#main"
+    "business-data.mod": "github:PhrontHQ/business-data.mod#main",
+    "postgre-s-q-l.mod": "github:PhrontHQ/postgre-s-q-l.mod"
   },
   "devDependencies": {
   },

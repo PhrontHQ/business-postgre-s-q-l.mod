@@ -51,6 +51,6 @@
         }
     },
     "ContactInformationDescriptor": {
-        "object": "../model/contact-information.mjson"
+        "object": "business-data.mod/data/main.mod/model/contact-information.mjson"
     }
 }

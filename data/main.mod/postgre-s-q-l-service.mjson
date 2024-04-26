@@ -81,7 +81,7 @@
         }
     },
     "Model": {
-        "object": "business-data.mod/data/main.mod/model/model.mjson"
+        "object": "business-data.mod/data/main.mod/model.mjson"
     },
 
     "TimeZoneMapping": {

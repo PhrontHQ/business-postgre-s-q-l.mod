@@ -27,7 +27,7 @@
     },
 
     "EmploymenPositiontRelationshipDescriptor": {
-        "object": "../model/employment-position-relationship.mjson"
+        "object": "business-data.mod/data/main.mod/model/employment-position-relationship.mjson"
     },
     "employmentPositionConverter": {
         "prototype": "montage/data/converter/raw-foreign-value-to-object-converter",

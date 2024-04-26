@@ -92,7 +92,7 @@
     },
 
     "OrganizationDescriptor": {
-        "object": "../model/organization.mjson"
+        "object": "business-data.mod/data/main.mod/model/organization.mjson"
     },
 
     "postalAddresses-value-converter": {

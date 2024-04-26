@@ -22,7 +22,7 @@
     },
 
     "ServiceObjectDescriptor": {
-        "object": "../model/service.mjson"
+        "object": "business-data.mod/data/main.mod/model/service.mjson"
     },
 
     "engagementQuestionnairesConverter": {

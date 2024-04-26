@@ -24,7 +24,7 @@
     },
 
     "EventPerson": {
-        "object": "../model/event-person.mjson"
+        "object": "business-data.mod/data/main.mod/model/event-person.mjson"
     },
     "person-converter": {
         "prototype": "montage/data/converter/raw-foreign-value-to-object-converter",

@@ -26,7 +26,7 @@
     },
 
     "Order": {
-        "object": "../model/order.mjson"
+        "object": "business-data.mod/data/main.mod/model/order.mjson"
     },
     "productForeignKeyConverter": {
         "prototype": "montage/data/converter/raw-foreign-value-to-object-converter",

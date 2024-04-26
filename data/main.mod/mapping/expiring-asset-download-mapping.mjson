@@ -34,7 +34,7 @@
     },
 
     "ExpiringAssetDownload": {
-        "object": "../model/expiring-asset-download.mjson"
+        "object": "business-data.mod/data/main.mod/model/expiring-asset-download.mjson"
     },
     "assetForeignKeyConverter": {
         "prototype": "montage/data/converter/raw-foreign-value-to-object-converter",

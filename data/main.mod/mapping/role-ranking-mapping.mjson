@@ -24,7 +24,7 @@
     },
 
     "RoleRanking": {
-        "object": "../model/role-ranking.mjson"
+        "object": "business-data.mod/data/main.mod/model/role-ranking.mjson"
     },
 
     "roleConverter": {

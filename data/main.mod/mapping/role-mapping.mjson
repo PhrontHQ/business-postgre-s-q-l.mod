@@ -32,7 +32,7 @@
     },
 
     "RoleDescriptor": {
-        "object": "../model/role.mjson"
+        "object": "business-data.mod/data/main.mod/model/role.mjson"
     },
     "eventsWithParticipationRoleConverter": {
         "prototype": "montage/data/converter/raw-foreign-value-to-object-converter",

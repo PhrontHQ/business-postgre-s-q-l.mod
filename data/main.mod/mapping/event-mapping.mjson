@@ -211,7 +211,7 @@
     },
 
     "ISODateStringToDateConverter": {
-        "prototype": "montage/core//converter/i-s-o-date-string-to-date-converter
+        "prototype": "montage/core//converter/i-s-o-date-string-to-date-converter"
     },
 
     "participationStatusLogConverter": {
@@ -245,15 +245,15 @@
     },
 
     "EventObjectDescriptor": {
-        "object": "../model/event.mjson"
+        "object": "business-data.mod/data/main.mod/model/event.mjson"
     },
 
     "PersonDescriptor": {
-        "object": "../model/person.mjson"
+        "object": "business-data.mod/data/main.mod/model/person.mjson"
     },
 
     "ResourceDescriptor": {
-        "object": "../model/resource.mjson"
+        "object": "business-data.mod/data/main.mod/model/resource.mjson"
     },
 
     "event-creator-converter": {
@@ -284,7 +284,7 @@
     },
 
     "string-to-range-converter": {
-        "prototype": "../converter/r-f-c-3339-u-t-c-range-string-to-date-range-converter"
+        "prototype": "postgre-s-q-l.mod/core/converter/r-f-c-3339-u-t-c-range-string-to-date-range-converter
     },
 
     "event-conferenceData-converter": {

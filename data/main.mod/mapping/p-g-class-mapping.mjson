@@ -27,7 +27,7 @@
     },
 
     "PGClassDescriptor": {
-        "object": "../model/p-g-class.mjson"
+        "object": "business-data.mod/data/main.mod/model/p-g-class.mjson"
     },
 
     "PGClassConverter": {

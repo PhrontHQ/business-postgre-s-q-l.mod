@@ -41,7 +41,7 @@
     },
 
     "CustomerEngagementQuestionnaireObjectDescriptor": {
-        "object": "../model/customer-engagement-questionnaire.mjson"
+        "object": "business-data.mod/data/main.mod/model/customer-engagement-questionnaire.mjson"
     },
 
     "servicesForeignKeyConverter": {

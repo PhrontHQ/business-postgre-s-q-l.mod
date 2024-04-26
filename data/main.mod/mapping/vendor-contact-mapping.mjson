@@ -30,7 +30,7 @@
     },
 
     "VendorContactDescriptor": {
-        "object": "../model/vendor-contact.mjson"
+        "object": "business-data.mod/data/main.mod/model/vendor-contact.mjson"
     },
     "vendorForeignKeysConverter": {
         "prototype": "montage/data/converter/raw-foreign-value-to-object-converter",

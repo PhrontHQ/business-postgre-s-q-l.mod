@@ -25,7 +25,7 @@
     },
 
     "LocalizedStringDescriptor": {
-        "object": "../model/localized-string.mjson"
+        "object": "business-data.mod/data/main.mod/model/localized-string.mjson"
     },
     "jsonbConverter": {
         "prototype": "postgre-s-q-l.mod/data/main.mod/converter/postgresql-jsonb-converter"

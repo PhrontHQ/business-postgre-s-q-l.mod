@@ -33,7 +33,7 @@
     },
 
     "PersonSignatureDescriptor": {
-        "object": "../model/person-signature.mjson"
+        "object": "business-data.mod/data/main.mod/model/person-signature.mjson"
     },
 
     "personConverter": {

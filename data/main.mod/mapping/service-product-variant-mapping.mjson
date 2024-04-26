@@ -41,11 +41,11 @@
     },
 
     "ServiceProductVariantObjectDescriptor": {
-        "object": "../model/service-product-variant.mjson"
+        "object": "business-data.mod/data/main.mod/model/service-product-variant.mjson"
     },
 
     "string-to-range-converter": {
-        "prototype": "../converter/r-f-c-3339-u-t-c-range-string-to-date-range-converter"
+        "prototype": "postgre-s-q-l.mod/core/converter/r-f-c-3339-u-t-c-range-string-to-date-range-converter
     },
 
     "providersForeignKeyConverter": {

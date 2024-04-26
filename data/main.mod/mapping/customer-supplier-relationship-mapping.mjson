@@ -27,7 +27,7 @@
     },
 
     "CustomerSupplierRelationshipDescriptor": {
-        "object": "../model/customer-supplier-relationship.mjson"
+        "object": "business-data.mod/data/main.mod/model/customer-supplier-relationship.mjson"
     },
     "ordersConverter": {
         "prototype": "montage/data/converter/raw-foreign-value-to-object-converter",

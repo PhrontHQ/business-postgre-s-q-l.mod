@@ -43,7 +43,7 @@
     },
 
     "EmploymenPositiontDescriptor": {
-        "object": "../model/employment-position.mjson"
+        "object": "business-data.mod/data/main.mod/model/employment-position.mjson"
     },
     "allowedEmploymentTypesConverter": {
         "prototype": "montage/data/converter/raw-foreign-value-to-object-converter",

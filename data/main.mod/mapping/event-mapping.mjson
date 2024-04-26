@@ -284,7 +284,7 @@
     },
 
     "string-to-range-converter": {
-        "prototype": "postgre-s-q-l.mod/core/converter/r-f-c-3339-u-t-c-range-string-to-date-range-converter
+        "prototype": "postgre-s-q-l.mod/core/converter/r-f-c-3339-u-t-c-range-string-to-date-range-converter"
     },
 
     "event-conferenceData-converter": {

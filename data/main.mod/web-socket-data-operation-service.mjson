@@ -1,0 +1,366 @@
+{
+    "root": {
+        "prototype": "montage/data/service/web-socket-data-operation-service",
+        "values": {
+            "identifier": "WebSocketDataOperationService",
+            "name": "WebSocketDataOperationService",
+            "exportName": "WebSocketDataOperationService",
+            "model": {"@": "Model"},
+            "mappings": [
+                {"@": "TimeZoneMapping"},
+                {"@": "DataObjectMapping"},
+                {"@": "assetMapping"},
+                {"@": "expiringAssetDownloadMapping"},
+                {"@": "collectionMapping"},
+                {"@": "countryMapping"},
+                {"@": "productMapping"},
+                {"@": "tangibleProductMapping"},
+                {"@": "intangibleProductMapping"},
+                {"@": "serviceMapping"},
+                {"@": "serviceEngagementMapping"},
+                {"@": "messagingChannelMapping"},
+                {"@": "partyMessagingChannelMapping"},
+                {"@": "PhoneNumberMapping"},
+                {"@": "partyPhoneNumberMapping"},
+                {"@": "partySMSNumberMapping"},
+                {"@": "InstantMessageAddressMapping"},
+                {"@": "partyInstantMessageAddressMapping"},
+                {"@": "contactFormMapping"},
+                {"@": "partyContactFormMapping"},
+                {"@": "EmailAddressMapping"},
+                {"@": "partyEmailAddressMapping"},
+                {"@": "productVariantMapping"},
+                {"@": "tangibleProductVariantMapping"},
+                {"@": "intangibleProductVariantMapping"},
+                {"@": "serviceProductVariantMapping"},
+                {"@": "productVariantPricePairMapping"},
+                {"@": "moneyMapping"},
+                {"@": "organizationMapping"},
+                {"@": "postalAddressMapping"},
+                {"@": "partyPostalAddressMapping"},
+                {"@": "partyMapping"},
+                {"@": "imageMapping"},
+                {"@": "personMapping"},
+                {"@": "personSignatureMapping"},
+                {"@": "resourceMapping"},
+                {"@": "personNameMapping"},
+                {"@": "personal-relationshipMapping"},
+                {"@": "calendar-mapping"},
+                {"@": "event-mapping"},
+                {"@": "role-mapping"},
+                {"@": "eventPersonMapping"},
+                {"@": "orderMapping"},
+                {"@": "orderLineItemMapping"},
+                {"@": "orderTransactionMapping"},
+                {"@": "positionMapping"},
+                {"@": "EmploymentPositionMapping"},
+                {"@": "EmploymentTypeMapping"},
+                {"@": "EmploymentPositionRelationshipMapping"},
+                {"@": "EmploymentPositionStaffingMapping"},
+                {"@": "CustomerSupplierRelationshipMapping"},
+                {"@": "B2CCustomerSupplierRelationshipMapping"},
+                {"@": "B2CCustomerSupplierResponsiblePartyMapping"},
+                {"@": "B2BCustomerSupplierRelationshipMapping"},
+                {"@": "GenderMapping"},
+                {"@": "QuestionnaireMapping"},
+                {"@": "QuestionMapping"},
+                {"@": "VariableMapping"},
+                {"@": "QuestionnaireQuestionMapping"},
+                {"@": "RespondentQuestionnaireMapping"},
+                {"@": "AnswerMapping"},
+                {"@": "RespondentQuestionnaireAnswerMapping"},
+                {"@": "RespondentQuestionnaireVariableValueMapping"},
+                {"@": "CustomerEngagementQuestionnaireMapping"},
+                {"@": "RoleRankingMapping"},
+                {"@": "ApplicationMapping"},
+                {"@": "UserPoolMapping"},
+                {"@": "AppClientMapping"},
+                {"@": "WebSocketSessionMapping"},
+                {"@": "WebSocketSessionConnectionMapping"}
+            ]
+        }
+    },
+    "Model": {
+        "object": "business-data.mod/data/main.mod/model.mjson"
+    },
+
+    "TimeZoneMapping": {
+        "object": "./mapping/time-zone-mapping.mjson"
+    },
+
+    "DataObjectMapping": {
+        "object": "./mapping/data-object-mapping.mjson"
+    },
+
+    "assetMapping": {
+        "object": "./mapping/asset-mapping.mjson"
+    },
+
+    "expiringAssetDownloadMapping": {
+        "object": "./mapping/expiring-asset-download-mapping.mjson"
+    },
+
+    "collectionMapping": {
+        "object": "./mapping/collection-mapping.mjson"
+    },
+
+    "countryMapping": {
+        "object": "./mapping/country-mapping.mjson"
+    },
+
+    "productMapping": {
+        "object": "./mapping/product-mapping.mjson"
+    },
+
+    "tangibleProductMapping": {
+        "object": "./mapping/tangible-product-mapping.mjson"
+    },
+
+    "intangibleProductMapping": {
+        "object": "./mapping/intangible-product-mapping.mjson"
+    },
+
+    "serviceMapping": {
+        "object": "./mapping/service-mapping.mjson"
+    },
+
+    "serviceEngagementMapping": {
+        "object": "./mapping/service-engagement-mapping.mjson"
+    },
+
+    "messagingChannelMapping": {
+        "object": "./mapping/messaging-channel/messaging-channel-mapping.mjson"
+    },
+
+    "partyMessagingChannelMapping": {
+        "object": "./mapping/messaging-channel/party-messaging-channel-mapping.mjson"
+    },
+
+    "PhoneNumberMapping": {
+        "object": "./mapping/messaging-channel/phone-number-mapping.mjson"
+    },
+
+    "partyPhoneNumberMapping": {
+        "object": "./mapping/messaging-channel/party-phone-number-mapping.mjson"
+    },
+
+    "partySMSNumberMapping": {
+        "object": "./mapping/messaging-channel/party-s-m-s-number-mapping.mjson"
+    },
+
+    "InstantMessageAddressMapping": {
+        "object": "./mapping/messaging-channel/instant-message-address-mapping.mjson"
+    },
+
+    "partyInstantMessageAddressMapping": {
+        "object": "./mapping/messaging-channel/party-instant-message-address-mapping.mjson"
+    },
+
+    "contactFormMapping": {
+        "object": "./mapping/messaging-channel/contact-form-mapping.mjson"
+    },
+
+    "partyContactFormMapping": {
+        "object": "./mapping/messaging-channel/party-contact-form-mapping.mjson"
+    },
+
+    "EmailAddressMapping": {
+        "object": "./mapping/messaging-channel/email-address-mapping.mjson"
+    },
+
+    "partyEmailAddressMapping": {
+        "object": "./mapping/messaging-channel/party-email-address-mapping.mjson"
+    },
+
+    "productVariantMapping": {
+        "object": "./mapping/product-variant-mapping.mjson"
+    },
+
+    "tangibleProductVariantMapping": {
+        "object": "./mapping/tangible-product-variant-mapping.mjson"
+    },
+
+    "intangibleProductVariantMapping": {
+        "object": "./mapping/intangible-product-variant-mapping.mjson"
+    },
+
+    "serviceProductVariantMapping": {
+        "object": "./mapping/service-product-variant-mapping.mjson"
+    },
+
+    "productVariantPricePairMapping": {
+        "object": "./mapping/product-variant-price-pair-mapping.mjson"
+    },
+
+    "moneyMapping": {
+        "object": "./mapping/money-mapping.mjson"
+    },
+
+    "organizationMapping": {
+        "object": "./mapping/organization-mapping.mjson"
+    },
+
+    "postalAddressMapping": {
+        "object": "./mapping/messaging-channel/postal-address-mapping.mjson"
+    },
+
+    "partyPostalAddressMapping": {
+        "object": "./mapping/messaging-channel/party-postal-address-mapping.mjson"
+    },
+
+    "partyMapping": {
+        "object": "./mapping/party-mapping.mjson"
+    },
+
+    "imageMapping": {
+        "object": "./mapping/image-mapping.mjson"
+    },
+
+    "personMapping": {
+        "object": "./mapping/person-mapping.mjson"
+    },
+
+    "personSignatureMapping": {
+        "object": "./mapping/person-signature-mapping.mjson"
+    },
+
+    "resourceMapping": {
+        "object": "./mapping/resource-mapping.mjson"
+    },
+
+    "personNameMapping": {
+        "object": "./mapping/person-name-mapping.mjson"
+    },
+
+    "personal-relationshipMapping": {
+        "object": "./mapping/personal-relationship-mapping.mjson"
+    },
+
+    "event-mapping": {
+        "object": "./mapping/event-mapping.mjson"
+    },
+
+    "role-mapping": {
+        "object": "./mapping/role-mapping.mjson"
+    },
+
+    "calendar-mapping": {
+        "object": "./mapping/calendar-mapping.mjson"
+    },
+
+    "eventPersonMapping": {
+        "object": "./mapping/event-person-mapping.mjson"
+    },
+
+    "orderMapping": {
+        "object": "./mapping/order-mapping.mjson"
+    },
+
+    "orderLineItemMapping": {
+        "object": "./mapping/order-line-item-mapping.mjson"
+    },
+
+    "orderTransactionMapping": {
+        "object": "./mapping/order-transaction-mapping.mjson"
+    },
+
+    "positionMapping": {
+        "object": "./mapping/position-mapping.mjson"
+    },
+
+    "EmploymentPositionMapping": {
+        "object": "./mapping/employment-position-mapping.mjson"
+    },
+
+    "EmploymentTypeMapping": {
+        "object": "./mapping/employment-type-mapping.mjson"
+    },
+
+    "EmploymentPositionRelationshipMapping": {
+        "object": "./mapping/employment-position-relationship-mapping.mjson"
+    },
+
+    "EmploymentPositionStaffingMapping": {
+        "object": "./mapping/employment-position-staffing-mapping.mjson"
+    },
+
+    "CustomerSupplierRelationshipMapping": {
+        "object": "./mapping/customer-supplier-relationship-mapping.mjson"
+    },
+
+    "B2CCustomerSupplierRelationshipMapping": {
+        "object": "./mapping/b-2-c-customer-supplier-relationship-mapping.mjson"
+    },
+
+    "B2CCustomerSupplierResponsiblePartyMapping": {
+        "object": "./mapping/b-2-c-customer-supplier-responsible-party-mapping.mjson"
+    },
+
+    "B2BCustomerSupplierRelationshipMapping": {
+        "object": "./mapping/b-2-b-customer-supplier-relationship-mapping.mjson"
+    },
+
+    "GenderMapping": {
+        "object": "./mapping/gender-mapping.mjson"
+    },
+
+    "QuestionnaireMapping": {
+        "object": "./mapping/questionnaire/questionnaire-mapping.mjson"
+    },
+
+    "QuestionMapping": {
+        "object": "./mapping/questionnaire/question-mapping.mjson"
+    },
+
+    "VariableMapping": {
+        "object": "./mapping/questionnaire/variable-mapping.mjson"
+    },
+
+    "QuestionnaireQuestionMapping": {
+        "object": "./mapping/questionnaire/questionnaire-question-mapping.mjson"
+    },
+
+    "RespondentQuestionnaireMapping": {
+        "object": "./mapping/questionnaire/respondent-questionnaire-mapping.mjson"
+    },
+
+    "AnswerMapping": {
+        "object": "./mapping/questionnaire/answer-mapping.mjson"
+    },
+
+    "RespondentQuestionnaireAnswerMapping": {
+        "object": "./mapping/questionnaire/respondent-questionnaire-answer-mapping.mjson"
+    },
+
+    "RespondentQuestionnaireVariableValueMapping": {
+        "object": "./mapping/questionnaire/respondent-questionnaire-variable-value-mapping.mjson"
+    },
+
+    "CustomerEngagementQuestionnaireMapping": {
+        "object": "./mapping/customer-engagement-questionnaire-mapping.mjson"
+    },
+
+    "RoleRankingMapping": {
+        "object": "./mapping/role-ranking-mapping.mjson"
+    },
+
+    "ApplicationMapping": {
+        "object": "./mapping/app/application-mapping.mjson"
+    },
+
+    "UserPoolMapping": {
+        "object": "./mapping/app/user-pool-mapping.mjson"
+    },
+
+    "AppClientMapping": {
+        "object": "./mapping/app/app-client-mapping.mjson"
+    },
+
+    "WebSocketSessionMapping": {
+        "object": "./mapping/app/web-socket-session-mapping.mjson"
+    },
+
+    "WebSocketSessionConnectionMapping": {
+        "object": "./mapping/app/web-socket-session-connection-mapping.mjson"
+    }
+}

@@ -18,7 +18,7 @@
   },
   "dependencies": {
     "montage": "github:PhrontHQ/montage#mod",
-    "geo.mod": "github:PhrontHQ/geo.mod.git#montage-19",
+    "geo.mod": "github:PhrontHQ/geo.mod#montage-19",
     "business-data.mod": "github:PhrontHQ/business-data.mod#main",
     "postgre-s-q-l.mod": "github:PhrontHQ/postgre-s-q-l.mod"
   },

@@ -28,7 +28,7 @@
         "object": "business-data.mod/data/main.mod/model/image.mjson"
     },
     "jsonbConverter": {
-        "prototype": "postgre-s-q-l.mod/data/main.mod/converter/postgresql-jsonb-converter"
+        "prototype": "postgre-s-q-l.mod/core/converter/postgresql-jsonb-converter"
     }
 
 }

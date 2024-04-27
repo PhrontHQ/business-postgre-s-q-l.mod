@@ -211,7 +211,7 @@
     },
 
     "ISODateStringToDateConverter": {
-        "prototype": "montage/core//converter/i-s-o-date-string-to-date-converter"
+        "prototype": "montage/core/converter/i-s-o-date-string-to-date-converter"
     },
 
     "participationStatusLogConverter": {
@@ -233,7 +233,7 @@
         }
     },
     "postgresql-interval-range-to-duration-range-converter": {
-        "prototype": "postgre-s-q-l.mod/data/main.mod/converter/postgresql-interval-range-to-duration-range-converter"
+        "prototype": "postgre-s-q-l.mod/core/converter/postgresql-interval-range-to-duration-range-converter"
     },
 
 

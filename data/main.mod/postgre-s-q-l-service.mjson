@@ -10,7 +10,6 @@
                 {"@": "TimeZoneMapping"},
                 {"@": "DataObjectMapping"},
                 {"@": "assetMapping"},
-                {"@": "expiringAssetDownloadMapping"},
                 {"@": "collectionMapping"},
                 {"@": "countryMapping"},
                 {"@": "productMapping"},
@@ -94,10 +93,6 @@
 
     "assetMapping": {
         "object": "./mapping/asset-mapping.mjson"
-    },
-
-    "expiringAssetDownloadMapping": {
-        "object": "./mapping/expiring-asset-download-mapping.mjson"
     },
 
     "collectionMapping": {

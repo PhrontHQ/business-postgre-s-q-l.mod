@@ -1,6 +1,6 @@
 {
     "root": {
-        "prototype": "montage/data/service/expression-data-mapping",
+        "prototype": "mod/data/service/expression-data-mapping",
         "values": {
             "objectDescriptor": {"@": "RespondentQuestionnaireDescriptor"},
             "rawDataPrimaryKeys":["id"],
@@ -52,45 +52,45 @@
     },
 
     "respondentConverter": {
-        "prototype": "montage/data/converter/raw-foreign-value-to-object-converter",
+        "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
         "values": {
             "convertExpression": "id == $"
         }
     },
     "questionnaireConverter": {
-        "prototype": "montage/data/converter/raw-foreign-value-to-object-converter",
+        "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
         "values": {
             "convertExpression": "id == $"
         }
     },
 
     "respondentAnswersConverter": {
-        "prototype": "montage/data/converter/raw-foreign-value-to-object-converter",
+        "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
         "values": {
                 "convertExpression": "respondentQuestionnaireId == $"
         }
     },
 
     "respondentVariableValuesConverter": {
-        "prototype": "montage/data/converter/raw-foreign-value-to-object-converter",
+        "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
         "values": {
                 "convertExpression": "respondentQuestionnaireId == $"
         }
     },
 
     "string-to-date-converter": {
-        "prototype": "montage/core/converter/i-s-o-date-string-to-date-converter"
+        "prototype": "mod/core/converter/i-s-o-date-string-to-date-converter"
     },
 
     "pdfExportConverter": {
-        "prototype": "montage/data/converter/raw-foreign-value-to-object-converter",
+        "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
         "values": {
             "convertExpression": "id == $"
         }
     },
 
     "eventsConverter": {
-        "prototype": "montage/data/converter/raw-foreign-value-to-object-converter",
+        "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
         "values": {
             "convertExpression": "respondentQuestionnaireIds.has($)"
         }

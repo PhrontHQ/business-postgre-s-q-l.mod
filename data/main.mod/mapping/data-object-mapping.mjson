@@ -1,6 +1,6 @@
 {
     "root": {
-        "prototype": "montage/data/service/expression-data-mapping",
+        "prototype": "mod/data/service/expression-data-mapping",
         "values": {
             "objectDescriptor": {"@": "DataObjectDescriptor"},
             "rawDataPrimaryKeys":["id"],
@@ -35,10 +35,10 @@
     },
 
     "DataObjectDescriptor": {
-        "object": "montage/data/model/data-object.mjson"
+        "object": "mod/data/model/data-object.mjson"
     },
 
     "string-to-date-converter": {
-        "prototype": "montage/core/converter/i-s-o-date-string-to-date-converter"
+        "prototype": "mod/core/converter/i-s-o-date-string-to-date-converter"
     }
 }

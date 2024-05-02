@@ -1,6 +1,6 @@
 {
     "root": {
-        "prototype": "montage/data/service/web-socket-data-operation-service",
+        "prototype": "mod/data/service/web-socket-data-operation-service",
         "values": {
             "identifier": "WebSocketDataOperationService",
             "name": "WebSocketDataOperationService",

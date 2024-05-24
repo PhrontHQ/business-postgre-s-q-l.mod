@@ -1,6 +1,6 @@
 {
     "root": {
-        "object": "app-infrastructure-data-postgre-s-q-l.mod/data/main.mod/mappings/user-identity-mapping.mjson",
+        "object": "app-infrastructure-data-postgre-s-q-l.mod/data/main.mod/mapping/user-identity-mapping.mjson",
         "values": {
             "objectMapping": {
                 "rules": {

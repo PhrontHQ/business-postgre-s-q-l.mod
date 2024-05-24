@@ -19,6 +19,8 @@
   "dependencies": {
     "mod": "github:PhrontHQ/mod#main",
     "geo.mod": "github:PhrontHQ/geo.mod#main",
+    "app-infrastructure-data.mod": "github:PhrontHQ/app-infrastructure-data.mod#main",
+    "app-infrastructure-data-postgre-s-q-l.mod": "github:PhrontHQ/app-infrastructure-data-postgre-s-q-l.mod#main",
     "business-data.mod": "github:PhrontHQ/business-data.mod#main",
     "postgre-s-q-l.mod": "github:PhrontHQ/postgre-s-q-l.mod#main"
   },

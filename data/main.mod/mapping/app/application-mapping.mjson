@@ -23,7 +23,7 @@
     },
 
     "ApplicationDescriptor": {
-        "object": "../../model/app/application.mjson"
+        "object": "business-data/model/app/application.mjson"
     },
 
     "controllingOrganizationConverter": {

@@ -348,7 +348,7 @@
     },
 
     "AppClientMapping": {
-        "object": "./mapping/app/app-client-mapping.mjson"
+        "object": "app-infrastructure-data-postgre-s-q-l.mod/data/main.mod/mapping/app-client-mapping.mjson"
     },
 
     "WebSocketSessionMapping": {

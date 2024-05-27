@@ -352,10 +352,10 @@
     },
 
     "WebSocketSessionMapping": {
-        "object": "app-infrastructure-data-postgre-s-q-l.mod/data/main.mod/mapping/app/web-socket-session-mapping.mjson"
+        "object": "app-infrastructure-data-postgre-s-q-l.mod/data/main.mod/mapping/web-socket-session-mapping.mjson"
     },
 
     "WebSocketSessionConnectionMapping": {
-        "object": "app-infrastructure-data-postgre-s-q-l.mod/data/main.mod/mapping/app/web-socket-session-connection-mapping.mjson"
+        "object": "app-infrastructure-data-postgre-s-q-l.mod/data/main.mod/mapping/web-socket-session-connection-mapping.mjson"
     }
 }

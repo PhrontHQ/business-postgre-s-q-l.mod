@@ -1,6 +1,6 @@
 {
     "root": {
-        "object": "app-infrastructure-data-postgre-s-q-l.mod/data/main.mod/mapping/application-mapping.mjson",
+        "prototype": "mod/data/service/expression-data-mapping",
         "values": {
             "objectDescriptor": {"@": "ApplicationDescriptor"},
             "rawDataPrimaryKeys":["id"],

@@ -348,14 +348,14 @@
     },
 
     "AppClientMapping": {
-        "object": "app-infrastructure-data-postgre-s-q-l.mod/data/main.mod/mapping/app-client-mapping.mjson"
+        "object": "./mapping/app-client-mapping.mjson"
     },
 
     "WebSocketSessionMapping": {
-        "object": "app-infrastructure-data-postgre-s-q-l.mod/data/main.mod/mapping/web-socket-session-mapping.mjson"
+        "object": "./mapping/web-socket-session-mapping.mjson"
     },
 
     "WebSocketSessionConnectionMapping": {
-        "object": "app-infrastructure-data-postgre-s-q-l.mod/data/main.mod/mapping/web-socket-session-connection-mapping.mjson"
+        "object": "./mapping/web-socket-session-connection-mapping.mjson"
     }
 }

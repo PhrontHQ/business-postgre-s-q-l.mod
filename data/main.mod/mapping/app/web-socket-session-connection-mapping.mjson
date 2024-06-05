@@ -1,0 +1,35 @@
+{
+    "root": {
+        "prototype": "mod/data/service/expression-data-mapping",
+        "values": {
+            "objectDescriptor": {"@": "WebSocketSessionConnectionDescriptor"},
+            "rawDataPrimaryKeys":["id"],
+            "objectMapping": {
+                "rules": {
+                    "connectionId": {
+                        "<->": "connectionId"
+                    },
+                    "timeRange": {
+                        "<->": "timeRange",
+                        "converter": {"@": "string-to-range-converter"}
+                    }
+                }
+            },
+            "rawDataMapping": {
+                "rules": {
+                }
+            },
+            "requisitePropertyNames": [
+                "name"
+            ]
+        }
+    },
+
+    "WebSocketSessionConnectionDescriptor": {
+        "object": "mod/data/model/app/web-socket-session-connection.mjson"
+    },
+
+    "string-to-range-converter": {
+        "prototype": "postgre-s-q-l.mod/core/converter/r-f-c-3339-u-t-c-range-string-to-date-range-converter"
+    }
+}

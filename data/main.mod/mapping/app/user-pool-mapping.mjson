@@ -6,6 +6,15 @@
             "rawDataPrimaryKeys":["id"],
             "objectMapping": {
                 "rules": {
+                    "name": {"<->": "name"},
+                    "appClients": {
+                        "<->": "id",
+                        "converter": {"@": "appClients-converter"}
+                    },
+                    "cognitoUserPool": {
+                        "<->": "cognitoUserPoolId",
+                        "converter": {"@": "cognitoUserPool-converter"}
+                    },
                     "servedOrganizations": {
                         "<-": "id",
                         "converter": {"@": "servedOrganizationsForeignKeyConverter"}
@@ -17,6 +26,20 @@
 
     "UserPoolDescriptor": {
         "object": "business-data.mod/data/main.mod/model/app/user-pool.mjson"
+    },
+
+    "appClients-converter": {
+        "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
+        "values": {
+            "convertExpression": "userPoolId == $"
+        }
+    },
+    
+    "cognitoUserPool-converter": {
+        "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
+        "values": {
+            "convertExpression": "Id == $"
+        }
     },
 
     "servedOrganizationsForeignKeyConverter": {

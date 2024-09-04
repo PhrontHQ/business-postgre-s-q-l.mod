@@ -35,7 +35,10 @@
                         "converter": {"@": "calendarsConverter"}
                     },
                     "name": {"<->": "name"},
-                    "type": {"<->": "type"},
+                    "type": {
+                        "<->": "typeId",
+                        "converter": {"@": "typeConverter"}
+                    },
                     "parent": {
                         "<->": "parentId",
                         "converter": {"@": "parentConverter"}
@@ -136,6 +139,13 @@
         "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
         "values": {
             "convertExpression": "ownerOrganizationId == $"
+        }
+    },
+
+    "typeConverter": {
+        "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
+        "values": {
+            "convertExpression": "id == $"
         }
     },
 

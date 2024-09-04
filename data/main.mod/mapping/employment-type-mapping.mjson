@@ -6,7 +6,6 @@
             "rawDataPrimaryKeys":["id"],
             "objectMapping": {
                 "rules": {
-                    "name": {"<->": "name"}
                 }
             },
             "rawDataMapping": {

@@ -6,29 +6,29 @@
             "rawDataPrimaryKeys":["id"],
             "objectMapping": {
                 "rules": {
-                    "s3Location": {"<->": "s3Location"},
+                    "storageObjectLocation": {"<->": "storageObjectLocation"},
                     "originLocation": {"<->": "originLocation"},
                     "description": {"<->": "description"},
-                    "s3BucketName": {"<-": "s3BucketName"},
-                    "s3Bucket": {
-                        "<->": "s3BucketName",
-                        "converter": {"@": "s3BucketForeignKeyConverter"}
+                    "storageBucketName": {"<-": "storageBucketName"},
+                    "storageBucket": {
+                        "<->": "storageBucketName",
+                        "converter": {"@": "storageBucketForeignKeyConverter"}
                     },
-                    "s3ObjectKey": {"<-": "s3ObjectKey"},
-                    "s3Object": {
-                        "<->": "{Bucket: s3BucketName, Key: s3ObjectKey}",
-                        "converter": {"@": "s3ObjectForeignKeyConverter"}
+                    "storageObjectKey": {"<-": "storageObjectKey"},
+                    "storageObject": {
+                        "<->": "{Bucket: storageBucketName, Key: storageObjectKey}",
+                        "converter": {"@": "storageObjectForeignKeyConverter"}
                     }
                 }
             },
             "rawDataMapping": {
                 "rules": {
-                    "s3BucketName": {"<-": "s3BucketName.defined() ? s3BucketName : (s3Bucket.defined() ? s3Bucket.name : null)"},
-                    "s3ObjectKey": {"<-": "s3ObjectKey.defined() ? s3ObjectKey : (s3Object.defined() ? s3Object.key : null)"}
+                    "storageBucketName": {"<-": "storageBucketName.defined() ? storageBucketName : (storageBucket.defined() ? storageBucket.name : null)"},
+                    "storageObjectKey": {"<-": "storageObjectKey.defined() ? storageObjectKey : (storageObject.defined() ? storageObject.key : null)"}
                 }
             },
             "requisitePropertyNames": [
-                "s3BucketName","s3ObjectKey","s3Location","originURL","description"
+                "storageBucketName","storageObjectKey","storageObjectLocation","originURL","description"
             ]
         }
     },
@@ -36,13 +36,13 @@
     "Asset": {
         "object": "business-data.mod/data/main.mod/model/asset.mjson"
     },
-    "s3BucketForeignKeyConverter": {
+    "storageBucketForeignKeyConverter": {
         "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
         "values": {
             "convertExpression": "Bucket == $"
         }
     },
-    "s3ObjectForeignKeyConverter": {
+    "storageObjectForeignKeyConverter": {
         "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
         "values": {
             "convertExpression": "Key == $.Key && Bucket == $.Bucket"

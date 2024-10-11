@@ -6,12 +6,16 @@
             "rawDataPrimaryKeys":["id"],
             "objectMapping": {
                 "rules": {
-                    "existenceTimeRange": {
-                        "<->": "existenceTimeRange",
-                        "converter": {"@": "string-to-range-converter"}
+                    "id": {
+                        "<->": "id"
                     },
-                    "connectionId": {
-                        "<->": "connectionId"
+                    "identity": {
+                        "<->": "identityId",
+                        "converter": {"@": "identityConverter"}
+                    },
+                    "connections": {
+                        "<->": "connections",
+                        "converter": {"@": "embedded-value-converter"}
                     },
                     "app": {
                         "<->": "appId",
@@ -24,7 +28,7 @@
                 }
             },
             "requisitePropertyNames": [
-                "name"
+                "identity"
             ]
         }
     },
@@ -37,13 +41,17 @@
         "prototype": "postgre-s-q-l.mod/core/converter/r-f-c-3339-u-t-c-range-string-to-date-range-converter"
     },
 
-    "appClients-converter": {
+    "identityConverter": {
         "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
         "values": {
-            "convertExpression": "applicationId == $"
+            "convertExpression": "id == $"
         }
     },
-
+    "embedded-value-converter": {
+        "prototype": "mod/data/converter/raw-embedded-value-to-object-converter",
+        "values": {
+        }
+    },
     "appConverter": {
         "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
         "values": {

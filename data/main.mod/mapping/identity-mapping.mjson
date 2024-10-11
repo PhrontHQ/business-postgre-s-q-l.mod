@@ -1,0 +1,28 @@
+{
+    "root": {
+        "prototype": "mod/data/service/expression-data-mapping",
+        "values": {
+            "objectDescriptor": {"@": "IdentityDescriptor"},
+            "rawDataPrimaryKeys":["id"],
+            "objectMapping": {
+                "rules": {
+                    "applicationIdentifier": {"<->": "applicationIdentifier"},
+                    "applicationCredentials": {"<->": "applicationCredentials"},
+                    "scope": {"<->": "scope"}
+                }
+            },
+            "rawDataMapping": {
+                "rules": {
+                }
+            },
+            "requisitePropertyNames": [
+                "applicationIdentifier","applicationCredentials","scope"
+            ]
+        }
+    },
+
+    "IdentityDescriptor": {
+        "object": "mod/data/main.mod/model/identity.mjson"
+    }
+
+}

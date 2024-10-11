@@ -6,11 +6,11 @@
             "rawDataPrimaryKeys":["id"],
             "objectMapping": {
                 "rules": {
-                    "connectionId": {
-                        "<->": "connectionId"
+                    "serverConnectionId": {
+                        "<->": "serverConnectionId"
                     },
-                    "timeRange": {
-                        "<->": "timeRange",
+                    "existenceTimeRange": {
+                        "<->": "existenceTimeRange",
                         "converter": {"@": "string-to-range-converter"}
                     }
                 }
@@ -20,7 +20,7 @@
                 }
             },
             "requisitePropertyNames": [
-                "name"
+                "serverConnectionId","existenceTimeRange"
             ]
         }
     },

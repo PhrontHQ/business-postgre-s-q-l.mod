@@ -16,7 +16,7 @@
                     },
                     "storageObjectKey": {"<-": "storageObjectKey"},
                     "storageObject": {
-                        "<->": "{Bucket: storageBucketName, Key: storageObjectKey}",
+                        "<->": "{storageBucketName: storageBucketName, storageObjectKey: storageObjectKey}",
                         "converter": {"@": "storageObjectForeignKeyConverter"}
                     }
                 }
@@ -39,13 +39,13 @@
     "storageBucketForeignKeyConverter": {
         "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
         "values": {
-            "convertExpression": "Bucket == $"
+            "convertExpression": "storageBucketName == $"
         }
     },
     "storageObjectForeignKeyConverter": {
         "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
         "values": {
-            "convertExpression": "Key == $.Key && Bucket == $.Bucket"
+            "convertExpression": "storageObjectKey == $.storageObjectKey && storageBucketName == $.storageBucketName"
         }
     }
 }

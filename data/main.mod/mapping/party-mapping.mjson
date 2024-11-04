@@ -6,6 +6,7 @@
             "rawDataPrimaryKeys":["id"],
             "objectMapping": {
                 "rules": {
+                    "aliases": {"<->": "aliases"},
                     "existenceTimeRange": {
                         "<->": "existenceTimeRange",
                         "converter": {"@": "string-to-range-converter"}

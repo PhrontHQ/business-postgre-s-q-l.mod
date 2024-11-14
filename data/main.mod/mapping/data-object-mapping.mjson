@@ -7,6 +7,7 @@
             "objectMapping": {
                 "rules": {
                     "originId": {"<->": "originId"},
+                    "description": {"<->": "description"},
                     "isTemplate": {"<->": "isTemplate"},
                     "templateName": {"<->": "templateName"},
                     "templateDescription": {"<->": "templateDescription"},

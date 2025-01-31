@@ -6,6 +6,10 @@
             "rawDataPrimaryKeys":["id"],
             "objectMapping": {
                 "rules": {
+                    "webSocketSession": {
+                        "<->": "webSocketSessionId",
+                        "converter": {"@": "webSocketSessionConverter"}
+                    },
                     "serverConnectionId": {
                         "<->": "serverConnectionId"
                     },
@@ -20,13 +24,20 @@
                 }
             },
             "requisitePropertyNames": [
-                "serverConnectionId","existenceTimeRange"
+                "webSocketSessionId","serverConnectionId","existenceTimeRange"
             ]
         }
     },
 
     "WebSocketSessionConnectionDescriptor": {
         "object": "mod/data/model/app/web-socket-session-connection.mjson"
+    },
+
+    "webSocketSessionConverter": {
+        "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
+        "values": {
+            "convertExpression": "id == $"
+        }
     },
 
     "string-to-range-converter": {

@@ -14,8 +14,8 @@
                         "converter": {"@": "identityConverter"}
                     },
                     "connections": {
-                        "<->": "connections",
-                        "converter": {"@": "embedded-value-converter"}
+                        "<->": "id",
+                        "converter": {"@": "connectionsConverter"}
                     },
                     "app": {
                         "<->": "appId",
@@ -47,9 +47,10 @@
             "convertExpression": "id == $"
         }
     },
-    "embedded-value-converter": {
-        "prototype": "mod/data/converter/raw-embedded-value-to-object-converter",
+    "connectionsConverter": {
+        "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
         "values": {
+            "convertExpression": "webSocketSessionId == $"
         }
     },
     "appConverter": {

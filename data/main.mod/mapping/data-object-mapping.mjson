@@ -7,8 +7,16 @@
             "objectMapping": {
                 "rules": {
                     "originId": {"<->": "originId"},
+                    "originDataSnapshot": {
+                        "<->": "originDataSnapshot"
+                    },
                     "description": {"<->": "description"},
                     "isTemplate": {"<->": "isTemplate"},
+                    "type":{
+                        "<->": "typeId",
+                        "converter": {"@": "typeForeignKeyConverter"}
+                    },
+                    "isType": {"<->": "isType"},
                     "templateName": {"<->": "templateName"},
                     "templateDescription": {"<->": "templateDescription"},
                     "creationDate": {
@@ -41,5 +49,16 @@
 
     "string-to-date-converter": {
         "prototype": "mod/core/converter/i-s-o-date-string-to-date-converter"
+    },
+
+    "jsonbConverter": {
+        "prototype": "postgre-s-q-l.mod/core/converter/postgresql-jsonb-converter"
+    },
+
+    "typeForeignKeyConverter": {
+        "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
+        "values": {
+            "convertExpression": "id == $"
+        }
     }
 }

@@ -21,10 +21,6 @@
                         "<->": "id",
                         "converter": {"@": "subtypesConverter"}
                     },
-                    "subtypes": {
-                        "<->": "id",
-                        "converter": {"@": "subtypesConverter"}
-                    },
                     "typeInstances": {
                         "<->": "id",
                         "converter": {"@": "typeInstancesForeignKeyConverter"}
@@ -83,7 +79,7 @@
     "typeForeignKeyConverter": {
         "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
         "values": {
-            "convertExpression": "id == $"
+            "convertExpression": "subtypeIds.has($) || typeInstanceIds.has($)"
         }
     },
     "subtypesConverter": {

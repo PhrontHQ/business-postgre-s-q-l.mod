@@ -21,6 +21,10 @@
                         "<->": "id",
                         "converter": {"@": "subtypesConverter"}
                     },
+                    "subtypes": {
+                        "<->": "id",
+                        "converter": {"@": "subtypesConverter"}
+                    },
                     "isType": {"<->": "isType"},
                     "typeInstances": {
                         "<->": "id",

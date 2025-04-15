@@ -6,6 +6,7 @@
             "rawDataPrimaryKeys":["id"],
             "objectMapping": {
                 "rules": {
+                    "fullModuleId": {"<->": "fullModuleId"},
                     "originId": {"<->": "originId"},
                     "originDataSnapshot": {
                         "<->": "originDataSnapshot"
@@ -13,12 +14,28 @@
                     "description": {"<->": "description"},
                     "isTemplate": {"<->": "isTemplate"},
                     "type":{
-                        "<->": "typeId",
+                        "<-": "id",
                         "converter": {"@": "typeForeignKeyConverter"}
                     },
+                    "subtypes": {
+                        "<->": "subtypeIds",
+                        "converter": {"@": "subtypesConverter"}
+                    },
                     "isType": {"<->": "isType"},
+                    "typeInstances": {
+                        "<->": "typeInstanceIds",
+                        "converter": {"@": "typeInstancesConverter"}
+                    },
                     "templateName": {"<->": "templateName"},
+                    "template":{
+                        "<->": "templateId",
+                        "converter": {"@": "templateForeignKeyConverter"}
+                    },
                     "templateDescription": {"<->": "templateDescription"},
+                    "templateInstances": {
+                        "<->": "id",
+                        "converter": {"@": "templateInstancesConverter"}
+                    },
                     "creationDate": {
                         "<->": "creationDate",
                         "converter": {"@": "string-to-date-converter"}
@@ -58,7 +75,31 @@
     "typeForeignKeyConverter": {
         "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
         "values": {
+            "convertExpression": "subtypeIds.has($) || typeInstanceIds.has($)"
+        }
+    },
+    "subtypesConverter": {
+        "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
+        "values": {
+            "convertExpression": "$.has(id)"
+        }
+    },
+    "typeInstancesConverter": {
+        "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
+        "values": {
+            "convertExpression": "$.has(id)"
+        }
+    },
+    "templateForeignKeyConverter": {
+        "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
+        "values": {
             "convertExpression": "id == $"
+        }
+    },
+    "templateInstancesConverter": {
+        "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
+        "values": {
+            "convertExpression": "templateId == $"
         }
     }
 }

@@ -6,9 +6,6 @@
             "rawDataPrimaryKeys":["id"],
             "objectMapping": {
                 "rules": {
-                    "name": {"<->": "name"},
-                    "displayName": {"<->": "displayName"},
-                    "type": {"<->": "typeModuleId"},
                     "questionnaires": {
                         "<->": "id",
                         "converter": {"@": "questionnairesForeignKeyConverter"}
@@ -28,7 +25,7 @@
                 }
             },
             "requisitePropertyNames": [
-                "name","displayName","type"
+                "name","displayName"
             ]
         }
     },

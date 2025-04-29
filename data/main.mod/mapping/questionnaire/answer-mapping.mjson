@@ -16,7 +16,10 @@
                     "bigIntegerRangeValue": {"<->": "bigIntegerRangeValue"},
                     "decimalValue": {"<->": "decimalValue"},
                     "decimalRangeValue": {"<->": "decimalRangeValue"},
-                    "timeValue": {"<->": "timeValue"},
+                    "timeValue": {
+                        "<->": "timeValue",
+                        "converter": {"@": "string-to-date-converter"}
+                    },
                     "timeRangeValue": {"<->": "timeRangeValue"},
                     "objectValue": {"<->": "objectValue"},
                     "respondentQuestionnaireAnswers": {
@@ -53,6 +56,9 @@
         "values": {
             "convertExpression": "valueIds.has($)"
         }
+    },
+    "string-to-date-converter": {
+        "prototype": "mod/core/converter/i-s-o-date-string-to-date-converter"
     }
 
 }

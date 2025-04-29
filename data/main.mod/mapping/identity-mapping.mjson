@@ -22,7 +22,7 @@
     },
 
     "IdentityDescriptor": {
-        "object": "mod/data/main.mod/model/identity.mjson"
+        "object": "mod/data/model/identity.mjson"
     }
 
 }

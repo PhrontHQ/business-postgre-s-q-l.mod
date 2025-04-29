@@ -66,6 +66,7 @@
             {"@": "CustomerEngagementQuestionnaireMapping"},
             {"@": "RoleRankingMapping"},
             {"@": "ApplicationMapping"},
+            {"@": "IdentityMapping"},
             {"@": "UserIdentityMapping"},
             {"@": "UserPoolMapping"},
             {"@": "AppClientMapping"},
@@ -332,6 +333,10 @@
 
     "ApplicationMapping": {
         "object": "./mapping/app/application-mapping.mjson"
+    },
+
+    "IdentityMapping": {
+        "object": "./mapping/identity-mapping.mjson"
     },
 
     "UserIdentityMapping": {

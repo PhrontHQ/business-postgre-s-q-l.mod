@@ -81,6 +81,12 @@
             "convertExpression": "typeId == $ && isType == true"
         }
     },
+    "typeInstancesConverter": {
+        "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
+        "values": {
+            "convertExpression": "typeId == $"
+        }
+    },
     "templateForeignKeyConverter": {
         "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
         "values": {

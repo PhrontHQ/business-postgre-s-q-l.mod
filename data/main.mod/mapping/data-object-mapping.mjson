@@ -79,7 +79,7 @@
     "typeForeignKeyConverter": {
         "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
         "values": {
-            "convertExpression": "subtypeIds.has($) || typeInstanceIds.has($)"
+            "convertExpression": "id == $"
         }
     },
     "subtypesConverter": {

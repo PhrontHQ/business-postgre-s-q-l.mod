@@ -14,16 +14,16 @@
                     "description": {"<->": "description"},
                     "isTemplate": {"<->": "isTemplate"},
                     "type":{
-                        "<-": "id",
+                        "<-": "typeId",
                         "converter": {"@": "typeForeignKeyConverter"}
                     },
                     "subtypes": {
-                        "<->": "subtypeIds",
+                        "<->": "id",
                         "converter": {"@": "subtypesConverter"}
                     },
                     "isType": {"<->": "isType"},
                     "typeInstances": {
-                        "<->": "typeInstanceIds",
+                        "<->": "id",
                         "converter": {"@": "typeInstancesConverter"}
                     },
                     "templateName": {"<->": "templateName"},
@@ -81,13 +81,13 @@
     "subtypesConverter": {
         "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
         "values": {
-            "convertExpression": "$.has(id)"
+            "convertExpression": "typeId == $ && isType == true"
         }
     },
     "typeInstancesConverter": {
         "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
         "values": {
-            "convertExpression": "$.has(id)"
+            "convertExpression": "typeId == $"
         }
     },
     "templateForeignKeyConverter": {

@@ -21,10 +21,6 @@
                         "<->": "id",
                         "converter": {"@": "subtypesConverter"}
                     },
-                    "typeInstances": {
-                        "<->": "id",
-                        "converter": {"@": "typeInstancesForeignKeyConverter"}
-                    },
                     "isType": {"<->": "isType"},
                     "typeInstances": {
                         "<->": "id",
@@ -67,19 +63,16 @@
     "DataObjectDescriptor": {
         "object": "mod/data/model/data-object.mjson"
     },
-
     "string-to-date-converter": {
         "prototype": "mod/core/converter/i-s-o-date-string-to-date-converter"
     },
-
     "jsonbConverter": {
         "prototype": "postgre-s-q-l.mod/core/converter/postgresql-jsonb-converter"
     },
-
     "typeForeignKeyConverter": {
         "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
         "values": {
-            "convertExpression": "subtypeIds.has($) || typeInstanceIds.has($)"
+            "convertExpression": "id == $"
         }
     },
     "subtypesConverter": {
@@ -104,6 +97,12 @@
         "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
         "values": {
             "convertExpression": "templateId == $"
+        }
+    },
+    "typeInstancesForeignKeyConverter": {
+        "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
+        "values": {
+            "convertExpression": "typeId == $"
         }
     }
 }

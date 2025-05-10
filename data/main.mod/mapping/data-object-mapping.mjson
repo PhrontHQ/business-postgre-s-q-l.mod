@@ -25,6 +25,10 @@
                         "<->": "id",
                         "converter": {"@": "subtypesConverter"}
                     },
+                    "typeInstances": {
+                        "<->": "id",
+                        "converter": {"@": "typeInstancesForeignKeyConverter"}
+                    },
                     "isType": {"<->": "isType"},
                     "typeInstances": {
                         "<->": "id",

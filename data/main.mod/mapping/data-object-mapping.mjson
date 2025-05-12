@@ -14,16 +14,16 @@
                     "description": {"<->": "description"},
                     "isTemplate": {"<->": "isTemplate"},
                     "type":{
-                        "<-": "id",
+                        "<-": "typeId",
                         "converter": {"@": "typeForeignKeyConverter"}
                     },
                     "subtypes": {
-                        "<->": "subtypeIds",
+                        "<->": "id",
                         "converter": {"@": "subtypesConverter"}
                     },
                     "isType": {"<->": "isType"},
                     "typeInstances": {
-                        "<->": "typeInstanceIds",
+                        "<->": "id",
                         "converter": {"@": "typeInstancesConverter"}
                     },
                     "templateName": {"<->": "templateName"},
@@ -63,31 +63,28 @@
     "DataObjectDescriptor": {
         "object": "mod/data/model/data-object.mjson"
     },
-
     "string-to-date-converter": {
         "prototype": "mod/core/converter/i-s-o-date-string-to-date-converter"
     },
-
     "jsonbConverter": {
         "prototype": "postgre-s-q-l.mod/core/converter/postgresql-jsonb-converter"
     },
-
     "typeForeignKeyConverter": {
         "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
         "values": {
-            "convertExpression": "subtypeIds.has($) || typeInstanceIds.has($)"
+            "convertExpression": "id == $"
         }
     },
     "subtypesConverter": {
         "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
         "values": {
-            "convertExpression": "$.has(id)"
+            "convertExpression": "typeId == $ && isType == true"
         }
     },
     "typeInstancesConverter": {
         "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
         "values": {
-            "convertExpression": "$.has(id)"
+            "convertExpression": "typeId == $"
         }
     },
     "templateForeignKeyConverter": {
@@ -100,6 +97,12 @@
         "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
         "values": {
             "convertExpression": "templateId == $"
+        }
+    },
+    "typeInstancesForeignKeyConverter": {
+        "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
+        "values": {
+            "convertExpression": "typeId == $"
         }
     }
 }

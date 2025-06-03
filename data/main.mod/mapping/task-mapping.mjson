@@ -9,7 +9,6 @@
                     "title": {"<->": "title"},
                     "plannedExecutionSequencePosition": {"<->": "plannedExecutionSequencePosition"},
                     "executionSequencePosition": {"<->": "executionSequencePosition"},
-                    "isTracked": {"<->": "isTracked"},
                     "isCritical": {"<->": "isCritical"},
 
                     "parentTask": {

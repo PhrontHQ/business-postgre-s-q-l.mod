@@ -1,0 +1,222 @@
+{
+    "root": {
+        "prototype": "mod/data/service/expression-data-mapping",
+        "values": {
+            "objectDescriptor": {"@": "TaskDescriptor"},
+            "rawDataPrimaryKeys":["id"],
+            "objectMapping": {
+                "rules": {
+                    "title": {"<->": "title"},
+                    "plannedExecutionSequencePosition": {"<->": "plannedExecutionSequencePosition"},
+                    "executionSequencePosition": {"<->": "executionSequencePosition"},
+                    "isTracked": {"<->": "isTracked"},
+                    "isCritical": {"<->": "isCritical"},
+
+                    "parentTask": {
+                        "<->": "parentTaskId",
+                        "converter": {"@": "parentTaskConverter"}
+                    },
+                    "subtasks": {
+                        "<->": "id",
+                        "converter": {"@": "subtasksConverter"}
+                    },
+
+                    "groupTask": {
+                        "<->": "groupTaskId",
+                        "converter": {"@": "groupTaskConverter"}
+                    },
+                    "groupedTasks": {
+                        "<->": "id",
+                        "converter": {"@": "groupedTasksConverter"}
+                    },
+
+                    "upstreamTasks": {
+                        "<->": "upstreamTaskIds",
+                        "converter": {"@": "upstreamTasksConverter"}
+                    },
+                    "downstreamTasks": {
+                        "<->": "id",
+                        "converter": {"@": "downstreamTasksConverter"}
+                    },
+                    "prerequisiteTasks": {
+                        "<->": "prerequisiteTaskIds",
+                        "converter": {"@": "prerequisiteTasksConverter"}
+                    },
+                    "isStarted": {"<->": "isStarted"},
+                    "isCompleted": {"<->": "isCompleted"},
+                    "resetCount": {"<->": "resetCount"},
+                    "plannedExecutionDuration": {"<->": "plannedExecutionDuration"},
+                    "executionDuration": {"<->": "executionDuration"}
+
+                }
+            },
+            "rawDataMapping": {
+                "rules": {
+                    "vehicleId": {
+                        "<-": "manufacturedTangible",
+                        "reverter": {"@": "manufacturedTangibleConverter"}
+                    }
+                }
+            },
+            "requisitePropertyNames": [
+                "description"
+            ]
+
+        }
+    },
+
+    "TaskDescriptor": {
+        "object": "manufacturing-data.mod/data/main.mod/model/task.mjson"
+    },
+
+    "operationConverter": {
+        "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
+        "values": {
+            "convertExpression": "id == $"
+        }
+    },
+
+    "typeConverter": {
+        "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
+        "values": {
+            "convertExpression": "id == $"
+        }
+    },
+
+    "backupTasksConverter": {
+        "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
+        "values": {
+            "convertExpression": "backedUpTaskId == $"
+        }
+    },
+
+    "backedUpTaskConverter": {
+        "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
+        "values": {
+            "convertExpression": "id == $"
+        }
+    },
+
+    "associatedToolsConverter": {
+        "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
+        "values": {
+            "convertExpression": "$.has(id)"
+        }
+    },
+
+    "associatedToolConfigurationsConverter": {
+        "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
+        "values": {
+            "convertExpression": "$.has(id)"
+        }
+    },
+
+    "associatedPartsConverter": {
+        "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
+        "values": {
+            "convertExpression": "$.has(id)"
+        }
+    },
+
+    "parentTaskConverter": {
+        "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
+        "values": {
+            "convertExpression": "id == $"
+        }
+    },
+    "subtasksConverter": {
+        "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
+        "values": {
+            "convertExpression": "parentTaskId == $"
+        }
+    },
+
+    "groupTaskConverter": {
+        "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
+        "values": {
+            "convertExpression": "id == $"
+        }
+    },
+    "groupedTasksConverter": {
+        "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
+        "values": {
+            "convertExpression": "groupTaskId == $"
+        }
+    },
+
+
+    "VehicleDescriptor": {
+        "object": "manufacturing-data.mod/data/main.mod/model/vehicle.mjson"
+    },
+    "vehicleManufacturedTangibleForeignKeyMapping": {
+        "prototype": "mod/data/service/raw-data-type-mapping",
+        "values": {
+            "type": {"@": "VehicleDescriptor"},
+            "expression": "vehicleId.defined()"
+        }
+    },
+    "manufacturedTangibleConverter": {
+        "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
+        "values": {
+            "convertExpression": "id == $",
+            "foreignDescriptorMappings": [
+                {"@": "vehicleManufacturedTangibleForeignKeyMapping"}
+            ]
+        }
+    },
+    "associatedFeaturesConverter": {
+        "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
+        "values": {
+            "convertExpression": "$.has(id)"
+        }
+    },
+
+    "upstreamTasksConverter": {
+        "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
+        "values": {
+            "convertExpression": "$.has(id)"
+        }
+    },
+
+    "downstreamTasksConverter": {
+        "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
+        "values": {
+            "convertExpression": "upstreamTaskIds.has($)"
+        }
+    },
+
+    "prerequisiteTasksConverter": {
+        "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
+        "values": {
+            "convertExpression": "$.has(id)"
+        }
+    },
+    "numberToEnumMemberConverter": {
+        "prototype": "mod/data/converter/number-to-enum-member-converter"
+    },
+
+    "possibleReleaseStatusValuesNumberToEnumMemberConverter": {
+        "prototype": "mod/data/converter/data-collection-iteration-converter",
+        "values": {
+            "mapConverter": {"@": "numberToEnumMemberConverter"}
+        }
+    },
+
+    "string-to-range-converter": {
+        "prototype": "postgre-s-q-l.mod/core/converter/number-range-string-to-number-range-converter"
+    },
+
+    "completionValidationTaskConverter": {
+        "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
+        "values": {
+            "convertExpression": "id == $"
+        }
+    },
+    "inferredCompletionTaskConverter": {
+        "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
+        "values": {
+            "convertExpression": "completionValidationTaskId == $"
+        }
+    }
+
+}

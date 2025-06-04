@@ -51,10 +51,6 @@
             },
             "rawDataMapping": {
                 "rules": {
-                    "vehicleId": {
-                        "<-": "manufacturedTangible",
-                        "reverter": {"@": "manufacturedTangibleConverter"}
-                    }
                 }
             },
             "requisitePropertyNames": [
@@ -144,31 +140,6 @@
     },
 
 
-    "VehicleDescriptor": {
-        "object": "business-data.mod/data/main.mod/model/vehicle.mjson"
-    },
-    "vehicleManufacturedTangibleForeignKeyMapping": {
-        "prototype": "mod/data/service/raw-data-type-mapping",
-        "values": {
-            "type": {"@": "VehicleDescriptor"},
-            "expression": "vehicleId.defined()"
-        }
-    },
-    "manufacturedTangibleConverter": {
-        "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
-        "values": {
-            "convertExpression": "id == $",
-            "foreignDescriptorMappings": [
-                {"@": "vehicleManufacturedTangibleForeignKeyMapping"}
-            ]
-        }
-    },
-    "associatedFeaturesConverter": {
-        "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
-        "values": {
-            "convertExpression": "$.has(id)"
-        }
-    },
 
     "upstreamTasksConverter": {
         "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
@@ -189,33 +160,7 @@
         "values": {
             "convertExpression": "$.has(id)"
         }
-    },
-    "numberToEnumMemberConverter": {
-        "prototype": "mod/data/converter/number-to-enum-member-converter"
-    },
-
-    "possibleReleaseStatusValuesNumberToEnumMemberConverter": {
-        "prototype": "mod/data/converter/data-collection-iteration-converter",
-        "values": {
-            "mapConverter": {"@": "numberToEnumMemberConverter"}
-        }
-    },
-
-    "string-to-range-converter": {
-        "prototype": "postgre-s-q-l.mod/core/converter/number-range-string-to-number-range-converter"
-    },
-
-    "completionValidationTaskConverter": {
-        "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
-        "values": {
-            "convertExpression": "id == $"
-        }
-    },
-    "inferredCompletionTaskConverter": {
-        "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
-        "values": {
-            "convertExpression": "completionValidationTaskId == $"
-        }
     }
+
 
 }

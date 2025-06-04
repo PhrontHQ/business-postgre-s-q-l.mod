@@ -145,7 +145,7 @@
 
 
     "VehicleDescriptor": {
-        "object": "manufacturing-data.mod/data/main.mod/model/vehicle.mjson"
+        "object": "business-data.mod/data/main.mod/model/vehicle.mjson"
     },
     "vehicleManufacturedTangibleForeignKeyMapping": {
         "prototype": "mod/data/service/raw-data-type-mapping",

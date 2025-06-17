@@ -14,7 +14,7 @@
                     "description": {"<->": "description"},
                     "isTemplate": {"<->": "isTemplate"},
                     "type":{
-                        "<-": "typeId",
+                        "<->": "typeId",
                         "converter": {"@": "typeForeignKeyConverter"}
                     },
                     "subtypes": {

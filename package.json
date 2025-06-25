@@ -17,7 +17,7 @@
     "url": "PhrontHQ/business-data-postgre-s-q-l.mod"
   },
   "dependencies": {
-    "mod": "github:PhrontHQ/mod#main",
+    "mod": "github:PhrontHQ/mod#bugfix/data-6-25",
     "geo.mod": "github:PhrontHQ/geo.mod#main",
     "business-data.mod": "github:PhrontHQ/business-data.mod#main",
     "postgre-s-q-l.mod": "github:PhrontHQ/postgre-s-q-l.mod#main"

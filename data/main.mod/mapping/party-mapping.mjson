@@ -6,6 +6,7 @@
             "rawDataPrimaryKeys":["id"],
             "objectMapping": {
                 "rules": {
+                    "name": {"<->": "name"},
                     "aliases": {"<->": "aliases"},
                     "existenceTimeRange": {
                         "<->": "existenceTimeRange",
@@ -35,7 +36,7 @@
         }
     },
     "PartyDescriptor": {
-        "object": "business-data.mod/data/main.mod/model/party.mjson"
+        "object": "business.mod/data/main.mod/model/party.mjson"
     },
     "string-to-range-converter": {
         "prototype": "postgre-s-q-l.mod/core/converter/r-f-c-3339-u-t-c-range-string-to-date-range-converter"

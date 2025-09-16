@@ -25,7 +25,7 @@
     },
 
     "ImageDescriptor": {
-        "object": "business-data.mod/data/main.mod/model/image.mjson"
+        "object": "business.mod/data/main.mod/model/image.mjson"
     },
     "jsonbConverter": {
         "prototype": "postgre-s-q-l.mod/core/converter/postgresql-jsonb-converter"

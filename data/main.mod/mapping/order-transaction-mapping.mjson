@@ -32,7 +32,7 @@
     },
 
     "OrderTransaction": {
-        "object": "business-data.mod/data/main.mod/model/order-transaction.mjson"
+        "object": "business.mod/data/main.mod/model/order-transaction.mjson"
     },
     "orderConverter": {
         "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",

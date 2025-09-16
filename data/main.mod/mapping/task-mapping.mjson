@@ -61,7 +61,7 @@
     },
 
     "TaskDescriptor": {
-        "object": "business-data.mod/data/main.mod/model/task.mjson"
+        "object": "business.mod/data/main.mod/model/task.mjson"
     },
 
     "operationConverter": {

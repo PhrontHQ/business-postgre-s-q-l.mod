@@ -64,7 +64,7 @@
     },
 
     "EmploymentPositionStaffingDescriptor": {
-        "object": "business-data.mod/data/main.mod/model/employment-position-staffing.mjson"
+        "object": "business.mod/data/main.mod/model/employment-position-staffing.mjson"
     },
 
     "postalAddresses-value-converter": {

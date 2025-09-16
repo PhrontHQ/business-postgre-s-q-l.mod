@@ -40,6 +40,6 @@
     },
 
     "CollectionDescriptor": {
-        "object": "business-data.mod/data/main.mod/model/collection.mjson"
+        "object": "business.mod/data/main.mod/model/collection.mjson"
     }
 }

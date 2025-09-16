@@ -34,7 +34,7 @@
     },
 
     "Asset": {
-        "object": "business-data.mod/data/main.mod/model/asset.mjson"
+        "object": "business.mod/data/main.mod/model/asset.mjson"
     },
     "storageBucketForeignKeyConverter": {
         "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",

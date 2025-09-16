@@ -31,7 +31,7 @@
     },
 
     "VariableDescriptor": {
-        "object": "business-data.mod/data/main.mod/model/questionnaire/variable.mjson"
+        "object": "business.mod/data/main.mod/model/questionnaire/variable.mjson"
     },
 
     "questionnairesForeignKeyConverter": {

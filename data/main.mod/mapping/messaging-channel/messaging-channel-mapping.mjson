@@ -26,7 +26,7 @@
     },
 
     "MessagingChannelDescriptor": {
-        "object": "business-data.mod/data/main.mod/model/messaging-channel/messaging-channel.mjson"
+        "object": "business.mod/data/main.mod/model/messaging-channel/messaging-channel.mjson"
     },
 
     "serviceProviderConverter": {

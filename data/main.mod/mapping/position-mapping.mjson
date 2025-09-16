@@ -29,7 +29,7 @@
         }
     },
     "PositionDescriptor": {
-        "object": "business-data.mod/data/main.mod/model/position.mjson"
+        "object": "business.mod/data/main.mod/model/position.mjson"
     },
     "roleConverter": {
         "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",

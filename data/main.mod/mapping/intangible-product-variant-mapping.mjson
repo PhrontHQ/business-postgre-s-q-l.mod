@@ -19,6 +19,6 @@
     },
 
     "IntangibleProductVariantObjectDescriptor": {
-        "object": "business-data.mod/data/main.mod/model/intangible-product-variant.mjson"
+        "object": "business.mod/data/main.mod/model/intangible-product-variant.mjson"
     }
 }

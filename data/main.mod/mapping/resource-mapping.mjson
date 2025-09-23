@@ -52,7 +52,7 @@
     },
 
     "ResourceDescriptor": {
-        "object": "business.mod/data/main.mod/model/resource.mjson"
+        "object": "business.mod/data/model/resource.mjson"
     },
 
     "postalAddresses-value-converter": {

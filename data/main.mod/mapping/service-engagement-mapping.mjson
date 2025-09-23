@@ -27,7 +27,7 @@
     },
 
     "ServiceEngagementObjectDescriptor": {
-        "object": "business.mod/data/main.mod/model/service-engagement.mjson"
+        "object": "business.mod/data/model/service-engagement.mjson"
     },
 
     "serviceToOneConverter": {

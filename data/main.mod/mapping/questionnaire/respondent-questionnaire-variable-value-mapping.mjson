@@ -30,7 +30,7 @@
         }
     },
     "RespondentQuestionnaireVariableValueDescriptor": {
-        "object": "business.mod/data/main.mod/model/questionnaire/respondent-questionnaire-variable-value.mjson"
+        "object": "business.mod/data/model/questionnaire/respondent-questionnaire-variable-value.mjson"
     },
 
     "respondentQuestionnaireConverter": {

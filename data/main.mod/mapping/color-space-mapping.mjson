@@ -18,7 +18,7 @@
     },
 
     "ColorSpaceDescriptor": {
-        "object": "business.mod/data/main.mod/model/color-space.mjson"
+        "object": "business.mod/data/model/color-space.mjson"
     }
 
 }

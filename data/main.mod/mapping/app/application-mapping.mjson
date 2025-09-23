@@ -25,7 +25,7 @@
     },
 
     "ApplicationDescriptor": {
-        "object": "business.mod/data/main.mod/model/app/application.mjson"
+        "object": "business.mod/data/model/app/application.mjson"
     },
 
     "appClients-converter": {

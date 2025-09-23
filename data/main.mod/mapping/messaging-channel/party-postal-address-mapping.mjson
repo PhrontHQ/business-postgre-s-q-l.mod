@@ -22,7 +22,7 @@
     },
 
     "PartyPostalAddressDescriptor": {
-        "object": "business.mod/data/main.mod/model/messaging-channel/party-postal-address.mjson"
+        "object": "business.mod/data/model/messaging-channel/party-postal-address.mjson"
     },
 
     "hostedEventsConverter": {

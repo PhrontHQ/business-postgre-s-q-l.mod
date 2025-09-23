@@ -63,7 +63,7 @@
     },
 
     "B2CCustomerSupplierRelationshipDescriptor": {
-        "object": "business.mod/data/main.mod/model/b-2-c-customer-supplier-relationship.mjson"
+        "object": "business.mod/data/model/b-2-c-customer-supplier-relationship.mjson"
     },
 
     "postalAddresses-value-converter": {

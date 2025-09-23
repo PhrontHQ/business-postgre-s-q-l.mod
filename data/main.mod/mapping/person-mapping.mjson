@@ -107,7 +107,7 @@
     },
 
     "PersonDescriptor": {
-        "object": "business.mod/data/main.mod/model/person.mjson"
+        "object": "business.mod/data/model/person.mjson"
     },
 
     "postalAddresses-value-converter": {

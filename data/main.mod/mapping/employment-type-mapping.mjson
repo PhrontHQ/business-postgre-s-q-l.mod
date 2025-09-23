@@ -18,6 +18,6 @@
     },
 
     "EmploymentType": {
-        "object": "business.mod/data/main.mod/model/employment-type.mjson"
+        "object": "business.mod/data/model/employment-type.mjson"
     }
 }

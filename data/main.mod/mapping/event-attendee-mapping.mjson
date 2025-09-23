@@ -24,6 +24,6 @@
     },
 
     "EventAttendee": {
-        "object": "business.mod/data/main.mod/model/event-attendee.mjson"
+        "object": "business.mod/data/model/event-attendee.mjson"
     }
 }

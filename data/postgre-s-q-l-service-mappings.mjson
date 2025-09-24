@@ -3,7 +3,7 @@
         "value": [
             {"@": "TimeZoneMapping"},
             {"@": "DataObjectMapping"},
-            {"@": "assetMapping"},
+            {"@": "digitalAssetMapping"},
             {"@": "collectionMapping"},
             {"@": "countryMapping"},
             {"@": "productMapping"},
@@ -84,8 +84,8 @@
         "object": "./mapping/data-object-mapping.mjson"
     },
 
-    "assetMapping": {
-        "object": "./mapping/asset-mapping.mjson"
+    "digitalAssetMapping": {
+        "object": "./mapping/digital-asset-mapping.mjson"
     },
 
     "collectionMapping": {

@@ -249,7 +249,7 @@
     },
 
     "PersonDescriptor": {
-        "object": "business.mod/data/model/person.mjson"
+        "object": "business.mod/data/model/party/person.mjson"
     },
 
     "ResourceDescriptor": {

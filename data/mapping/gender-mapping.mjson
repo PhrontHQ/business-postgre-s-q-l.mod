@@ -18,7 +18,7 @@
     },
 
     "GenderDescriptor": {
-        "object": "business.mod/data/model/gender.mjson"
+        "object": "mod/data/model/party/gender.mjson"
     }
 
 }

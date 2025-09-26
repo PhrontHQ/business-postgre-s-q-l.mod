@@ -43,7 +43,7 @@
     },
 
     "UserIdentityDescriptor": {
-        "object": "business.mod/data/model/app/user-identity.mjson"
+        "object": "mod/data/model/app/user-identity.mjson"
     },
 
 

@@ -17,7 +17,7 @@
     },
 
     "PartyPhoneNumber": {
-        "object": "business.mod/data/model/messaging-channel/party-phone-number.mjson"
+        "object": "mod/data/model/messaging-channel/party-phone-number.mjson"
     }
 
 }

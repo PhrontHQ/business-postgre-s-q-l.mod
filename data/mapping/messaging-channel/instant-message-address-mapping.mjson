@@ -20,6 +20,6 @@
     },
 
     "InstantMessageAddressDescriptor": {
-        "object": "business.mod/data/model/messaging-channel/instant-message-address.mjson"
+        "object": "mod/data/model/messaging-channel/instant-message-address.mjson"
     }
 }

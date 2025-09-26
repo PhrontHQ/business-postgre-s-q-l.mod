@@ -25,7 +25,7 @@
     },
 
     "UserPoolDescriptor": {
-        "object": "business.mod/data/model/app/user-pool.mjson"
+        "object": "mod/data/model/app/user-pool.mjson"
     },
 
     "appClients-converter": {

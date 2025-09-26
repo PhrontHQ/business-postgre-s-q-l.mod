@@ -38,7 +38,7 @@
     },
 
     "PhoneNumber": {
-        "object": "business.mod/data/model/messaging-channel/phone-number.mjson"
+        "object": "mod/data/model/messaging-channel/phone-number.mjson"
     },
 
     "partyPhoneNumbersConverter": {

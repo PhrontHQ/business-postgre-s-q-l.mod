@@ -25,6 +25,6 @@
     },
 
     "PersonName": {
-        "object": "business.mod/data/model/person-name.mjson"
+        "object": "mod/data/model/party/person-name.mjson"
     }
 }

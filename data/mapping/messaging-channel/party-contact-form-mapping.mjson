@@ -18,7 +18,7 @@
     },
 
     "PartyContactFormDescriptor": {
-        "object": "business.mod/data/model/messaging-channel/party-contact-form.mjson"
+        "object": "mod/data/model/messaging-channel/party-contact-form.mjson"
     }
 
 }

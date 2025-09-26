@@ -145,7 +145,7 @@
         }
     },
     "PersonDescriptor": {
-        "object": "business.mod/data/model/person.mjson"
+        "object": "business.mod/data/model/party/person.mjson"
     },
 
     "ownerOrganizationForeignKeyMapping": {
@@ -156,7 +156,7 @@
         }
     },
     "OrganizationDescriptor": {
-        "object": "business.mod/data/model/organization.mjson"
+        "object": "business.mod/data/model/party/organization.mjson"
     },
 
     "ownerResourceForeignKeyMapping": {

@@ -95,7 +95,7 @@
     },
 
     "OrganizationDescriptor": {
-        "object": "business.mod/data/model/organization.mjson"
+        "object": "business.mod/data/model/party/organization.mjson"
     },
 
     "postalAddresses-value-converter": {

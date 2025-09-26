@@ -63,7 +63,7 @@
     },
 
     "PartyMessagingChannelDescriptor": {
-        "object": "business.mod/data/model/messaging-channel/party-messaging-channel.mjson"
+        "object": "mod/data/model/messaging-channel/party-messaging-channel.mjson"
     },
 
     "personPartyForeignKeyMapping": {
@@ -74,7 +74,7 @@
         }
     },
     "PersonDescriptor": {
-        "object": "business.mod/data/model/person.mjson"
+        "object": "business.mod/data/model/party/person.mjson"
     },
 
     "organizationPartyForeignKeyMapping": {
@@ -85,7 +85,7 @@
         }
     },
     "OrganizationDescriptor": {
-        "object": "business.mod/data/model/organization.mjson"
+        "object": "business.mod/data/model/party/organization.mjson"
     },
 
     "resourcePartyForeignKeyMapping": {

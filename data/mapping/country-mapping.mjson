@@ -33,7 +33,7 @@
     },
 
     "CountryDescriptor": {
-        "object": "business.mod/data/model/country.mjson"
+        "object": "mod/data/model/country.mjson"
     },
 
     "geometryConverter": {

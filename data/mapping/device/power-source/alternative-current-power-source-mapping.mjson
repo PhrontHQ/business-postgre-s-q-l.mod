@@ -1,0 +1,35 @@
+{
+    "root": {
+        "prototype": "mod/data/service/expression-data-mapping",
+        "values": {
+            "objectDescriptor": {"@": "AlternativePowerSourceDescriptor"},
+            "rawDataTypeName": "Device",
+            "rawDataPrimaryKeys":["id"],
+            "objectMapping": {
+                "rules": {
+                    "frequencyRange": {
+                        "<->": "frequencyRange",
+                        "converter": {"@":"number-range-string-to-frequency-range-converter"}
+                    },
+                    "phaseCount": {"<->": "phaseCount"}
+                }
+            },
+            "rawDataMapping": {
+                "rules": {
+                }
+            },
+            "requisitePropertyNames": [
+                "phaseCount"
+            ]
+
+        }
+    },
+
+    "AlternativePowerSourceDescriptor": {
+        "object": "business.mod/data/model/device/power-source/alternative-current-power-source.mjson"
+    },
+    "number-range-string-to-frequency-range-converter": {
+        "prototype": "postgre-s-q-l.mod/core/converter/number-range-string-to-number-range-converter"
+    }
+
+}

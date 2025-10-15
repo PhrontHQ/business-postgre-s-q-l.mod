@@ -1,0 +1,25 @@
+{
+    "root": {
+        "prototype": "mod/data/service/expression-data-mapping",
+        "values": {
+            "objectDescriptor": {"@": "NetworkingDeviceDescriptor"},
+            "rawDataTypeName": "Device",
+            "rawDataPrimaryKeys":["id"],
+            "objectMapping": {
+                "rules": {
+                    "MACAddress": {"<->": "MACAddress"},
+                    "subnetAddress": {"<->": "subnetAddress"},
+                    "gatewayAddress": {"<->": "gatewayAddress"}
+                }
+            },
+            "rawDataMapping": {
+                "rules": {
+                }
+            }
+        }
+    },
+
+    "NetworkingDeviceDescriptor": {
+        "object": "business.mod/data/model/device/networking-device.mjson"
+    }
+}

@@ -1,0 +1,42 @@
+{
+    "root": {
+        "prototype": "mod/data/service/expression-data-mapping",
+        "values": {
+            "objectDescriptor": {"@": "ElectricalPowerSourceDescriptor"},
+            "rawDataTypeName": "Device",
+            "rawDataPrimaryKeys":["id"],
+            "objectMapping": {
+                "rules": {
+                    "currentType": {"<->": "currentType"},
+                    "amperageRange": {
+                        "<->": "amperageRange",
+                        "converter": {"@":"number-range-string-to-amperage-range-converter"}
+                    },
+                    "voltageRange": {
+                        "<->": "voltageRange",
+                        "converter": {"@":"number-range-string-to-voltage-range-converter"}
+                    }
+                }
+            },
+            "rawDataMapping": {
+                "rules": {
+                }
+            },
+            "requisitePropertyNames": [
+                "currentType", "amperageRange", "voltageRange"
+            ]
+
+        }
+    },
+
+    "ElectricalPowerSourceDescriptor": {
+        "object": "business.mod/data/model/device/power-source/electrical-power-source.mjson"
+    },
+    "number-range-string-to-amperage-range-converter": {
+        "prototype": "postgre-s-q-l.mod/core/converter/number-range-string-to-number-range-converter"
+    },
+    "number-range-string-to-voltage-range-converter": {
+        "prototype": "postgre-s-q-l.mod/core/converter/number-range-string-to-number-range-converter"
+    }
+
+}

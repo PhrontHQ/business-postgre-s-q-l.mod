@@ -1,0 +1,285 @@
+{
+    "root": {
+        "prototype": "mod/data/service/expression-data-mapping",
+        "values": {
+            "objectDescriptor": {"@": "DeviceDescriptor"},
+            "rawDataTypeName": "Device",
+            "rawDataPrimaryKeys":["id"],
+            "objectMapping": {
+                "rules": {
+                    "originId": {"<-": "originId"},
+                    "name": {"<->": "name"},
+                    "description": {"<->": "description"},
+                    "type": {
+                        "<->": "typeId",
+                        "converter": {"@": "typeConverter"}
+                    },
+                    "model": {"<->": "model"},
+                    "manufacturer": {
+                        "<->": "manufacturerId",
+                        "converter": {"@": "manufacturerConverter"}
+                    },
+                    "serialNumber": {"<->": "serialNumber"},
+                    "powerSource": {
+                        "<->": "powerSourceId",
+                        "converter": {"@": "powerSourceConverter"}
+                    },
+                    "ipAddress": {"<->": "ipAddress"},
+                    "port": {"<->": "port"},
+                    "supportedProtocols": {
+                        "<->": "supportedProtocolIds",
+                        "converter": {"@": "supportedProtocolsConverter"}
+                    },
+                    
+                    "defaultProtocol": {"<->": "defaultProtocolId",
+                        "converter": {"@": "defaultProtocolConverter"}
+                    },
+                    "activeProtocol": {"<->": "activeProtocolId",
+                        "converter": {"@": "activeProtocolConverter"}
+                    },
+                    "tasks": {
+                        "<->": "id",
+                        "converter": {"@": "tasksConverter"}
+                    },
+                    "associatedTaskTypes": {
+                        "<->": "associatedTaskTypeIds",
+                        "converter": {"@": "associatedTaskTypesConverter"}
+                    },
+                    "logicalNode": {"<->": "logicalNode"},
+                    "compatibleAccessoryDevices": {
+                        "<->": "compatibleAccessoryDeviceIds",
+                        "converter": {"@": "compatibleAccessoriesConverter"}
+                    },
+                    "supplementabledDevices": {
+                        "<->": "id",
+                        "converter": {"@": "supplementabledDevicesConverter"}
+                    },
+                    "accessoryDevices": {
+                        "<->": "accessoryDeviceIds",
+                        "converter": {"@": "accessoryDevicesConverter"}
+                    },
+                    "supplementedDevices": {
+                        "<->": "id",
+                        "converter": {"@": "supplementedDevicesConverter"}
+                    },
+                    "compatibleToolDevices": {
+                        "<->": "compatibleToolDeviceIds",
+                        "converter": {"@": "compatibleToolDevicesConverter"}
+                    },
+                    "toolCompatibilityDeviceList": {
+                        "<->": "id",
+                        "converter": {"@": "toolCompatibilityDeviceListConverter"}
+                    },
+                    "toolDevices": {
+                        "<->": "toolDeviceIds",
+                        "converter": {"@": "toolDevicesConverter"}
+                    },
+                    "toolTargetDevices": {
+                        "<->": "id",
+                        "converter": {"@": "toolTargetDevicesConverter"}
+                    },
+                    "possibleHostDeviceConnections": {
+                        "<->": "possibleHostDeviceConnectionIds",
+                        "converter": {"@": "possibleHostDeviceConnectionsConverter"}
+                    },
+                    "hostDeviceConnections": {
+                        "<->": "id",
+                        "converter": {"@": "hostDeviceConnectionsConverter"}
+                    },
+                    "nodeDeviceConnections": {
+                        "<->": "id",
+                        "converter": {"@": "nodeDeviceConnectionsConverter"}
+                    },
+                    "deviceConfigurations": {
+                        "<->": "id",
+                        "converter": {"@": "deviceConfigurationsConverter"}
+                    },
+                    "defaultDeviceConfiguration": {
+                        "<->": "defaultDeviceConfigurationId",
+                        "converter": {"@": "defaultDeviceConfigurationConverter"}
+                    },
+                    "activeDeviceConfiguration": {
+                        "<->": "activeDeviceConfigurationId",
+                        "converter": {"@": "activeDeviceConfigurationConverter"}
+                    },
+                    "settingsStoringDeviceConfiguration": {
+                        "<->": "id",
+                        "converter": {"@": "settingsStoringDeviceConfigurationConverter"}
+                    }
+                }
+            },
+            "rawDataMapping": {
+                "rules": {
+                }
+            },
+            "requisitePropertyNames": [
+                "fullModuleId", "name","type","description"
+            ]
+        }
+    },
+
+    "DeviceDescriptor": {
+        "object": "business.mod/data/model/device.mjson"
+    },
+
+    "typeConverter": {
+        "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
+        "values": {
+            "convertExpression": "id == $"
+        }
+    },
+
+    "manufacturerConverter": {
+        "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
+        "values": {
+            "convertExpression": "id == $"
+        }
+    },
+
+    "powerSourceConverter": {
+        "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
+        "values": {
+            "convertExpression": "id == $"
+        }
+    },
+
+    "supportedProtocolsConverter": {
+        "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
+        "values": {
+            "convertExpression": "$.has(id)"
+        }
+    },
+
+
+    "defaultProtocolConverter": {
+        "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
+        "values": {
+            "convertExpression": "id == $"
+        }
+    },
+
+
+    "activeProtocolConverter": {
+        "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
+        "values": {
+            "convertExpression": "id == $"
+        }
+    },
+
+    "workstationConverter": {
+        "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
+        "values": {
+            "convertExpression": "id == $"
+        }
+    },
+    "tasksConverter": {
+        "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
+        "values": {
+            "convertExpression": "associatedToolIds.has($)"
+        }
+    },
+
+    "associatedTaskTypesConverter": {
+        "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
+        "values": {
+            "convertExpression": "$.has(id)"
+        }
+    },
+    "compatibleAccessoriesConverter": {
+        "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
+        "values": {
+            "convertExpression": "$.has(id)"
+        }
+    },
+    "supplementabledDevicesConverter": {
+        "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
+        "values": {
+            "convertExpression": "compatibleAccessoryDeviceIds.has($)"
+        }
+    },
+
+    "accessoryDevicesConverter": {
+        "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
+        "values": {
+            "convertExpression": "$.has(id)"
+        }
+    },
+    "supplementedDevicesConverter": {
+        "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
+        "values": {
+            "convertExpression": "accessoryDeviceIds.has($)"
+        }
+    },
+
+
+    "compatibleToolDevicesConverter": {
+        "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
+        "values": {
+            "convertExpression": "$.has(id)"
+        }
+    },
+    "toolCompatibilityDeviceListConverter": {
+        "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
+        "values": {
+            "convertExpression": "compatibleToolDeviceIds.has($)"
+        }
+    },
+
+    "toolDevicesConverter": {
+        "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
+        "values": {
+            "convertExpression": "$.has(id)"
+        }
+    },
+    "toolTargetDevicesConverter": {
+        "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
+        "values": {
+            "convertExpression": "toolDeviceIds.has($)"
+        }
+    },
+    
+    "possibleHostDeviceConnectionsConverter": {
+        "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
+        "values": {
+            "convertExpression": "$.has(id)"
+        }
+    },
+
+    "hostDeviceConnectionsConverter": {
+        "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
+        "values": {
+            "convertExpression": "hostId == $"
+        }
+    },
+    "nodeDeviceConnectionsConverter": {
+        "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
+        "values": {
+            "convertExpression": "nodeId == $"
+        }
+    },
+    "deviceConfigurationsConverter": {
+        "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
+        "values": {
+            "convertExpression": "deviceId == $"
+        }
+    },
+    "defaultDeviceConfigurationConverter": {
+        "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
+        "values": {
+            "convertExpression": "id == $"
+        }
+    },
+    "activeDeviceConfigurationConverter": {
+        "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
+        "values": {
+            "convertExpression": "id == $"
+        }
+    },
+    "settingsStoringDeviceConfigurationConverter": {
+        "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
+        "values": {
+            "convertExpression": "settingsStoringDeviceId == $"
+        }
+    }
+
+}

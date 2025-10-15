@@ -1,0 +1,62 @@
+{
+    "root": {
+        "prototype": "mod/data/service/expression-data-mapping",
+        "values": {
+            "objectDescriptor": {"@": "DeviceConnectionDescriptor"},
+            "rawDataPrimaryKeys":["id"],
+            "objectMapping": {
+                "rules": {
+                    "nodeIdentifier": {"<->": "nodeIdentifier"},
+                    "host": {
+                        "<->": "hostId",
+                        "converter": {"@": "hostConverter"}
+                    },
+                    "node": {
+                        "<->": "nodeId",
+                        "converter": {"@": "nodeConverter"}
+                    },
+                    "role": {
+                        "<->": "roleId",
+                        "converter": {"@": "roleConverter"}
+                    },
+                    "logicalNodeNumber": {"<->": "logicalNodeNumber"},
+                    "logicalNodeNumberRange": {
+                        "<->": "logicalNodeNumberRange",
+                        "converter": {"@":"number-range-string-to-frequency-range-converter"}
+                    },
+                    "physicalInterface": {"<->": "physicalInterface"},
+                    "logicalInterface": {"<->": "logicalInterface"}
+                }
+            },
+            "rawDataMapping": {
+                "rules": {
+                }
+            }
+        }
+    },
+
+    "DeviceConnectionDescriptor": {
+        "object": "business.mod/data/model/device/device-connection.mjson"
+    },
+    "number-range-string-to-frequency-range-converter": {
+        "prototype": "postgre-s-q-l.mod/core/converter/number-range-string-to-number-range-converter"
+    },
+    "hostConverter": {
+        "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
+        "values": {
+            "convertExpression": "id == $"
+        }
+    },
+    "nodeConverter": {
+        "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
+        "values": {
+            "convertExpression": "id == $"
+        }
+    },
+    "roleConverter": {
+        "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
+        "values": {
+            "convertExpression": "id == $"
+        }
+    }
+}

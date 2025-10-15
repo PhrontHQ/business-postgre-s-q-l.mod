@@ -45,8 +45,27 @@
                     "isCompleted": {"<->": "isCompleted"},
                     "resetCount": {"<->": "resetCount"},
                     "plannedExecutionDuration": {"<->": "plannedExecutionDuration"},
-                    "executionDuration": {"<->": "executionDuration"}
-
+                    "executionDuration": {"<->": "executionDuration"},
+                    "backupTasks": {
+                        "<->": "id",
+                        "converter": {"@": "backupTasksConverter"}
+                    },
+                    "backedUpTask": {
+                        "<->": "backedUpTaskId",
+                        "converter": {"@": "backedUpTaskConverter"}
+                    },
+                    "associatedTools": {
+                        "<->": "associatedToolIds",
+                        "converter": {"@": "associatedToolsConverter"}
+                    },
+                    "associatedToolConfigurations": {
+                        "<->": "associatedToolConfigurationIds",
+                        "converter": {"@": "associatedToolConfigurationsConverter"}
+                    },
+                    "associatedParts": {
+                        "<->": "partIds",
+                        "converter": {"@": "associatedPartsConverter"}
+                    }
                 }
             },
             "rawDataMapping": {

@@ -1,0 +1,24 @@
+{
+    "root": {
+        "prototype": "mod/data/service/expression-data-mapping",
+        "values": {
+            "objectDescriptor": {"@": "ScanningDeviceDescriptor"},
+            "rawDataTypeName": "Device",
+            "rawDataPrimaryKeys":["id"],
+            "objectMapping": {
+                "rules": {
+                }
+            },
+            "rawDataMapping": {
+                "rules": {
+                }
+            }
+        }
+    },
+
+    "ScanningDeviceDescriptor": {
+        "object": "business.mod/data/model/device/scanning-device.mjson"
+    }
+
+
+}

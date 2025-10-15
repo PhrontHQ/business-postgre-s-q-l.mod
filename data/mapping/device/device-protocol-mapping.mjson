@@ -1,0 +1,24 @@
+{
+    "root": {
+        "prototype": "mod/data/service/expression-data-mapping",
+        "values": {
+            "objectDescriptor": {"@": "DeviceProtocolDescriptor"},
+            "rawDataPrimaryKeys":["id"],
+            "objectMapping": {
+                "rules": {
+                    "name": {"<->": "name"}
+                }
+            },
+            "rawDataMapping": {
+                "rules": {
+                }
+            },
+            "requisitePropertyNames": [
+            ]
+        }
+    },
+
+    "DeviceProtocolDescriptor": {
+        "object": "business.mod/data/model/device-protocol.mjson"
+    }
+}

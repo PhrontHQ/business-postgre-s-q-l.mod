@@ -1,0 +1,48 @@
+{
+    "root": {
+        "prototype": "mod/data/service/expression-data-mapping",
+        "values": {
+            "objectDescriptor": {"@": "PartDescriptor"},
+            "rawDataPrimaryKeys":["id"],
+            "objectMapping": {
+                "rules": {
+                    "originId": {"<->": "originId"},
+                    "name": {"<->": "name"},
+                    "description": {"<->": "description"},
+                    "prefix": {"<->": "prefix"},
+                    "base": {"<->": "base"},
+                    "suffix": {"<->": "suffix"},
+                    "activity": {"<->": "activity"},
+                    "noticeActivity": {"<->": "noticeActivity"},
+                    "cpsc": {"<->": "cpsc"},
+                    "usageConditionCodes": {"<->": "usageConditionCodes"},
+                    "associatedFeatures": {
+                        "<->": "associatedFeatureIds",
+                        "converter": {"@": "associatedFeaturesConverter"}
+                    },
+                    "incorrectPartNumbers": {"<->": "incorrectPartNumbers"},
+                    "needsTraceability": {"<->": "needsTraceability"}
+                }
+            },
+            "rawDataMapping": {
+                "rules": {
+                }
+            },
+            "requisitePropertyNames": [
+                "name"
+            ]
+        }
+    },
+
+    "PartDescriptor": {
+        "object": "business.mod/data/model/part.mjson"
+    },
+    
+    "associatedFeaturesConverter": {
+        "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
+        "values": {
+            "convertExpression": "$.has(id)"
+        }
+    }
+
+}

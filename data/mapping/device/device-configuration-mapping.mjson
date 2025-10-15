@@ -1,0 +1,44 @@
+{
+    "root": {
+        "prototype": "mod/data/service/expression-data-mapping",
+        "values": {
+            "objectDescriptor": {"@": "DeviceConfigurationDescriptor"},
+            "rawDataPrimaryKeys":["id"],
+            "objectMapping": {
+                "rules": {
+                    "name": {"<->": "name"},
+                    "numericIdentifier": {"<->": "numericIdentifier"},
+                    "description": {"<->": "description"},
+                    "device": {
+                        "<->": "deviceId",
+                        "converter": {"@": "deviceConverter"}
+                    },
+                    "settingsStoringDevice": {
+                        "<->": "settingsStoringDeviceId",
+                        "converter": {"@": "settingsStoringDeviceConverter"}
+                    }
+                }
+            },
+            "rawDataMapping": {
+                "rules": {
+                }
+            }
+        }
+    },
+
+    "DeviceConfigurationDescriptor": {
+        "object": "business.mod/data/model/device/device-configuration.mjson"
+    },
+    "deviceConverter": {
+        "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
+        "values": {
+            "convertExpression": "id == $"
+        }
+    },
+    "settingsStoringDeviceConverter": {
+        "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
+        "values": {
+            "convertExpression": "id == $"
+        }
+    }
+}

@@ -38,6 +38,22 @@
             {"@": "resourceMapping"},
             {"@": "personNameMapping"},
             {"@": "personal-relationshipMapping"},
+            {"@": "DeviceMapping"},
+            {"@": "DeviceProtocolMapping"},
+            {"@": "ComputingDeviceMapping"},
+            {"@": "NetworkingDeviceMapping"},
+            {"@": "DeviceConfigurationMapping"},
+            {"@": "DeviceConnectionMapping"},
+            {"@": "ImagingDeviceMapping"},
+
+            {"@": "PowerSourceMapping"},
+            {"@": "ElectricalPowerSourceMapping"},
+            {"@": "AlternativeCurrentPowerSourceMapping"},
+            {"@": "DirectCurrentPowerSourceMapping"},
+            {"@": "FuelPowerSourceMapping"},
+            {"@": "HydraulicPowerSourceMapping"},
+            {"@": "PneumaticPowerSourceMapping"},
+            {"@": "PartMapping"},
             {"@": "calendar-mapping"},
             {"@": "event-mapping"},
             {"@": "role-mapping"},
@@ -230,6 +246,59 @@
 
     "role-mapping": {
         "object": "./mapping/role-mapping.mjson"
+    },
+
+    "DeviceMapping": {
+        "object": "./mapping/device-mapping.mjson"
+    },
+    "DeviceProtocolMapping": {
+        "object": "./mapping/device-protocol-mapping.mjson"
+    },
+    "ComputingDeviceMapping": {
+        "object": "./mapping/device/computing-device-mapping.mjson"
+    },
+    "NetworkingDeviceMapping": {
+        "object": "./mapping/device/networking-device-mapping.mjson"
+    },
+    "DeviceConfigurationMapping": {
+        "object": "./mapping/device/device-configuration-mapping.mjson"
+    },
+    "DeviceConnectionMapping": {
+        "object": "./mapping/device/device-connection-mapping.mjson"
+    },
+    "ImagingDeviceMapping": {
+        "object": "./mapping/device/imaging-device-mapping.mjson"
+    },
+    "PrintingDeviceMapping": {
+        "object": "./mapping/device/printing-device-mapping.mjson"
+    },
+    "ScanningDeviceMapping": {
+        "object": "./mapping/device/scanning-device-mapping.mjson"
+    },
+
+    "PowerSourceMapping": {
+        "object": "./mapping/device/power-source/power-source-mapping.mjson"
+    },
+    "ElectricalPowerSourceMapping": {
+        "object": "./mapping/device/power-source/electrical-power-source-mapping.mjson"
+    },
+    "AlternativeCurrentPowerSourceMapping": {
+        "object": "./mapping/device/power-source/alternative-current-power-source-mapping.mjson"
+    },
+    "DirectCurrentPowerSourceMapping": {
+        "object": "./mapping/device/power-source/direct-current-power-source-mapping.mjson"
+    },
+    "FuelPowerSourceMapping": {
+        "object": "./mapping/device/power-source/fuel-power-source-mapping.mjson"
+    },
+    "HydraulicPowerSourceMapping": {
+        "object": "./mapping/device/power-source/hydraulic-power-source-mapping.mjson"
+    },
+    "PneumaticPowerSourceMapping": {
+        "object": "./mapping/device/power-source/pneumatic-power-source-mapping.mjson"
+    },
+    "PartMapping": {
+        "object": "./mapping/part-mapping.mjson"
     },
 
     "calendar-mapping": {

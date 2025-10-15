@@ -1,0 +1,26 @@
+{
+    "root": {
+        "prototype": "mod/data/service/expression-data-mapping",
+        "values": {
+            "objectDescriptor": {"@": "PneumaticPowerSourceDescriptor"},
+            "rawDataTypeName": "Device",
+            "rawDataPrimaryKeys":["id"],
+            "objectMapping": {
+                "rules": {
+                }
+            },
+            "rawDataMapping": {
+                "rules": {
+                }
+            },
+            "requisitePropertyNames": [
+            ]
+
+        }
+    },
+
+    "PneumaticPowerSourceDescriptor": {
+        "object": "business.mod/data/model/device/power-source/pneumatic-power-source.mjson"
+    }
+
+}

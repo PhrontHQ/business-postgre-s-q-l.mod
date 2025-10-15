@@ -1,0 +1,24 @@
+{
+    "root": {
+        "prototype": "mod/data/service/expression-data-mapping",
+        "values": {
+            "objectDescriptor": {"@": "ComputingDeviceDescriptor"},
+            "rawDataTypeName": "Device",
+            "rawDataPrimaryKeys":["id"],
+            "objectMapping": {
+                "rules": {
+                }
+            },
+            "rawDataMapping": {
+                "rules": {
+                }
+            }
+        }
+    },
+
+    "ComputingDeviceDescriptor": {
+        "object": "business.mod/data/model/device/computing-device.mjson"
+    }
+
+
+}

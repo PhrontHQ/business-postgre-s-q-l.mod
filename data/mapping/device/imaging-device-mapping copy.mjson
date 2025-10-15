@@ -1,0 +1,26 @@
+{
+    "root": {
+        "prototype": "mod/data/service/expression-data-mapping",
+        "values": {
+            "objectDescriptor": {"@": "ImagingDeviceDescriptor"},
+            "rawDataTypeName": "Device",
+            "rawDataPrimaryKeys":["id"],
+            "objectMapping": {
+                "rules": {
+                    "resolutionValue": {"<->": "resolutionValue"},
+                    "resolutionUnit": {"<->": "resolutionUnit"}
+                }
+            },
+            "rawDataMapping": {
+                "rules": {
+                }
+            }
+        }
+    },
+
+    "ImagingDeviceDescriptor": {
+        "object": "business.mod/data/model/device/imaging-device.mjson"
+    }
+
+
+}

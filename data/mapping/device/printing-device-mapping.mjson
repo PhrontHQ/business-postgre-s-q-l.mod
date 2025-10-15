@@ -1,0 +1,34 @@
+{
+    "root": {
+        "prototype": "mod/data/service/expression-data-mapping",
+        "values": {
+            "objectDescriptor": {"@": "PrintingDeviceDescriptor"},
+            "rawDataTypeName": "Device",
+            "rawDataPrimaryKeys":["id"],
+            "objectMapping": {
+                "rules": {
+                    "activePrintDocument": {
+                        "<->": "activePrintDocumentId",
+                        "converter": {"@": "activePrintDocumentConverter"}
+                    }
+                }
+            },
+            "rawDataMapping": {
+                "rules": {
+                }
+            }
+        }
+    },
+
+    "PrintingDeviceDescriptor": {
+        "object": "business.mod/data/model/device/printing-device.mjson"
+    },
+
+    "activePrintDocumentConverter": {
+        "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
+        "values": {
+            "convertExpression": "id == $"
+        }
+    }
+
+}

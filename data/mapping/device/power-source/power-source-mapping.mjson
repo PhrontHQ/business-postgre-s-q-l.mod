@@ -1,0 +1,28 @@
+{
+    "root": {
+        "prototype": "mod/data/service/expression-data-mapping",
+        "values": {
+            "objectDescriptor": {"@": "PowerSourceDescriptor"},
+            "rawDataTypeName": "Device",
+            "rawDataPrimaryKeys":["id"],
+            "objectMapping": {
+                "rules": {
+                    "energyType": {"<->": "energyType"}
+                }
+            },
+            "rawDataMapping": {
+                "rules": {
+                }
+            },
+            "requisitePropertyNames": [
+                "energyType"
+            ]
+
+        }
+    },
+
+    "PowerSourceDescriptor": {
+        "object": "business.mod/data/model/device/power-source/power-source.mjson"
+    }
+
+}

@@ -119,7 +119,7 @@
     },
 
     "DeviceDescriptor": {
-        "object": "business.mod/data/model/device.mjson"
+        "object": "business.mod/data/model/device/device.mjson"
     },
 
     "typeConverter": {

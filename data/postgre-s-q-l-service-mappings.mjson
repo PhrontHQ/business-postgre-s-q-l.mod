@@ -45,6 +45,10 @@
             {"@": "DeviceConfigurationMapping"},
             {"@": "DeviceConnectionMapping"},
             {"@": "ImagingDeviceMapping"},
+            {"@": "PrintingDeviceMapping"},
+            {"@": "PrintDocumentMapping"},
+            {"@": "PrintDocumentSourceCodeVariableMapping"},
+            {"@": "ScanningDeviceMapping"},
 
             {"@": "PowerSourceMapping"},
             {"@": "ElectricalPowerSourceMapping"},
@@ -271,6 +275,12 @@
     },
     "PrintingDeviceMapping": {
         "object": "./mapping/device/printing-device-mapping.mjson"
+    },
+    "PrintDocumentMapping": {
+        "object": "./mapping/device/print-document-mapping.mjson"
+    },
+    "PrintDocumentSourceCodeVariableMapping": {
+        "object": "./mapping/device/print-document-source-code-variable-mapping.mjson"
     },
     "ScanningDeviceMapping": {
         "object": "./mapping/device/scanning-device-mapping.mjson"

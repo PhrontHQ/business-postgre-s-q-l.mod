@@ -1,0 +1,42 @@
+{
+    "root": {
+        "prototype": "mod/data/service/expression-data-mapping",
+        "values": {
+            "objectDescriptor": {"@": "PrintDocumentSourceCodeVariableDescriptor"},
+            "rawDataPrimaryKeys":["id"],
+            "objectMapping": {
+                "rules": {
+                    "userInputString": {"<->": "userInputString"},
+                    "taskVariable": {
+                        "<->": "taskVariableId",
+                        "converter": {"@": "taskVariableConverter"}
+                    },
+                    "taskVariableValue": {"<->": "taskVariableValue"},
+                    "taskVariableValueSubstringRange": {
+                        "<->": "taskVariableValueSubstringRange",
+                        "converter": {"@":"number-range-string-to-range-converter"}
+                    },
+                    "stringValue": {"<->": "stringValue"}
+
+                }
+            },
+            "rawDataMapping": {
+                "rules": {
+                }
+            }
+        }
+    },
+
+    "PrintDocumentSourceCodeVariableDescriptor": {
+        "object": "manufacturing.mod/data/model/device/print-document-source-code-variable.mjson"
+    },
+    "number-range-string-to-range-converter": {
+        "prototype": "postgre-s-q-l.mod/core/converter/number-range-string-to-number-range-converter"
+    },
+    "taskVariableConverter": {
+        "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
+        "values": {
+            "convertExpression": "id == $"
+        }
+    }
+}

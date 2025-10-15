@@ -1,0 +1,38 @@
+{
+    "root": {
+        "prototype": "mod/data/service/expression-data-mapping",
+        "values": {
+            "objectDescriptor": {"@": "PrintDocumentDescriptor"},
+            "rawDataPrimaryKeys":["id"],
+            "objectMapping": {
+                "rules": {
+                    "documentDescriptionLanguage": {"<->": "documentDescriptionLanguage"},
+                    "documentSourceCode": {"<->": "documentSourceCode"},
+                    "documentSourceCodeVariables": {
+                        "<->": "documentSourceCodeVariableIds",
+                        "converter": {"@": "documentSourceCodeVariableConverter"}
+                    }
+                }
+            },
+            "rawDataMapping": {
+                "rules": {
+                }
+            }
+        }
+    },
+
+    "PrintDocumentDescriptor": {
+        "object": "manufacturing.mod/data/model/device/print-document.mjson"
+    },
+    "documentSourceCodeVariableConverter": {
+        "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
+        "values": {
+            "convertExpression": "$.has(id)"
+        }
+    }
+
+
+
+
+
+}

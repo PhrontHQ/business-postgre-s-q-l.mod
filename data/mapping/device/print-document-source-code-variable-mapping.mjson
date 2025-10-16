@@ -28,7 +28,7 @@
     },
 
     "PrintDocumentSourceCodeVariableDescriptor": {
-        "object": "manufacturing.mod/data/model/device/print-document-source-code-variable.mjson"
+        "object": "business.mod/data/model/device/print-document-source-code-variable.mjson"
     },
     "number-range-string-to-range-converter": {
         "prototype": "postgre-s-q-l.mod/core/converter/number-range-string-to-number-range-converter"

@@ -14,9 +14,9 @@
                         "<->":"employerId",
                         "converter": {"@": "employerConverter"}
                     },
-                    "position": {
-                        "<->":"positionId",
-                        "converter": {"@": "positionConverter"}
+                    "job": {
+                        "<->":"jobId",
+                        "converter": {"@": "jobConverter"}
                     },
                     "staffingHistory": {
                         "<->":"id",
@@ -57,7 +57,7 @@
             "convertExpression": "id == $"
         }
     },
-    "positionConverter": {
+    "jobConverter": {
         "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
         "values": {
             "convertExpression": "id == $"

@@ -22,7 +22,7 @@
     },
 
     "PrintDocumentDescriptor": {
-        "object": "manufacturing.mod/data/model/device/print-document.mjson"
+        "object": "business.mod/data/model/device/print-document.mjson"
     },
     "documentSourceCodeVariableConverter": {
         "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",

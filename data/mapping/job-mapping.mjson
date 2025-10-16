@@ -2,15 +2,15 @@
     "root": {
         "prototype": "mod/data/service/expression-data-mapping",
         "values": {
-            "objectDescriptor": {"@": "PositionDescriptor"},
+            "objectDescriptor": {"@": "JobDescriptor"},
             "rawDataPrimaryKeys":["id"],
             "objectMapping": {
                 "rules": {
                     "name": {
                         "<->": "name"
                     },
-                    "role": {
-                        "<->":"roleId",
+                    "roles": {
+                        "<->":"roleIds",
                         "converter": {"@": "roleConverter"}
                     },
                     "employmentPositions": {
@@ -28,19 +28,19 @@
             ]
         }
     },
-    "PositionDescriptor": {
-        "object": "business.mod/data/model/position.mjson"
+    "JobDescriptor": {
+        "object": "business.mod/data/model/job.mjson"
     },
     "roleConverter": {
         "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
         "values": {
-            "convertExpression": "id == $"
+            "convertExpression": "$.has(id)"
         }
     },
     "employmentPositionsConverter": {
         "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
         "values": {
-            "convertExpression": "positionId == $"
+            "convertExpression": "jobId == $"
         }
     }
 

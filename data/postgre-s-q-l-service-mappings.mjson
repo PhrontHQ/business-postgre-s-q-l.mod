@@ -65,7 +65,7 @@
             {"@": "orderMapping"},
             {"@": "orderLineItemMapping"},
             {"@": "orderTransactionMapping"},
-            {"@": "positionMapping"},
+            {"@": "jobMapping"},
             {"@": "EmploymentPositionMapping"},
             {"@": "EmploymentTypeMapping"},
             {"@": "EmploymentPositionRelationshipMapping"},
@@ -253,10 +253,10 @@
     },
 
     "DeviceMapping": {
-        "object": "./mapping/device-mapping.mjson"
+        "object": "./mapping/device/device-mapping.mjson"
     },
     "DeviceProtocolMapping": {
-        "object": "./mapping/device-protocol-mapping.mjson"
+        "object": "./mapping/device/device-protocol-mapping.mjson"
     },
     "ComputingDeviceMapping": {
         "object": "./mapping/device/computing-device-mapping.mjson"
@@ -331,8 +331,8 @@
         "object": "./mapping/order-transaction-mapping.mjson"
     },
 
-    "positionMapping": {
-        "object": "./mapping/position-mapping.mjson"
+    "jobMapping": {
+        "object": "./mapping/job-mapping.mjson"
     },
 
     "EmploymentPositionMapping": {

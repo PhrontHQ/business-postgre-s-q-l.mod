@@ -19,6 +19,6 @@
     },
 
     "DeviceProtocolDescriptor": {
-        "object": "business.mod/data/model/device-protocol.mjson"
+        "object": "business.mod/data/model/device/device-protocol.mjson"
     }
 }

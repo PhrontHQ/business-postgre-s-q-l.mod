@@ -39,7 +39,7 @@
                         "converter": {"@": "name-converter"}
                     },
                     "gender": {
-                        "<->": "genderID",
+                        "<->": "genderId",
                         "converter": {"@": "gender-converter"}
                     },
                     "aliases": {
@@ -54,14 +54,6 @@
                     "serviceProductVariantsProvided": {
                         "<->": "id",
                         "converter": {"@": "serviceProductVariantsProvidedConverter"}
-                    },
-                    "firstName": {"<->": "firstName"},
-                    "lastName": {"<->": "lastName"},
-                    "email": {"<->": "email"},
-                    "phone": {"<->": "phone"},
-                    "addresses": {
-                        "<->": "addressIds",
-                        "converter": {"@": "addressesConverter"}
                     },
                     "userIdentities": {
                         "<->": "userIdentityIds",
@@ -176,13 +168,6 @@
         "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
         "values": {
             "convertExpression": "providerIds.has($)"
-        }
-    },
-
-    "addressesConverter": {
-        "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
-        "values": {
-            "convertExpression": "$.has(id)"
         }
     },
 

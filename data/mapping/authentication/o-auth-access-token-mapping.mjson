@@ -1,0 +1,40 @@
+{
+    "root": {
+        "prototype": "mod/data/service/expression-data-mapping",
+        "values": {
+            "objectDescriptor": {"@": "OAuthAccessTokenDescriptor"},
+            "rawDataPrimaryKeys":["accessToken"],
+            "objectMapping": {
+                "rules": {
+                    "identity": {"<->": "identityId"},
+                    "isReadOnly": {"<-": "true"},
+                    "accessToken": {"<->": "accessToken"},
+                    "tokenType": {"<->": "tokenType"},
+                    "validityDuration": {"<->": "validityDuration"},
+                    "refreshToken": {"<->": "refreshToken || null"},
+                    "refreshTokenValidityDuration": {"<->": "refreshTokenValidityDuration || null"},
+                    "idToken": {"<->": "idToken || null"}
+                }
+            },
+            "requisitePropertyNames": [
+                "identity", "isReadOnly", "accessToken","tokenType","validityDuration"
+            ],
+            "rawDataMapping": {
+                "rules": {
+                }
+            }
+        }
+    },
+
+    "Criteria": {
+        "object": "mod/core/criteria"
+    },
+
+    "OAuthAccessTokenDescriptor": {
+        "object": "mod/data/model/authentication/o-auth-access-token.mjson",
+        "values": {
+            "mutabilityCriteria": "@Criteria.thatEvaluatesToFalse"
+          }
+    }
+
+}

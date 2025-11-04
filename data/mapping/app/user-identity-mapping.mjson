@@ -20,9 +20,9 @@
                         "<->": "zoneinfo",
                         "converter":  {"@": "timeZoneConverter"}
                     },
-                    "person": {
+                    "user": {
                         "<->": "id",
-                        "converter": {"@": "person-converter"}
+                        "converter": {"@": "user-converter"}
                     }
                 }
             },
@@ -47,7 +47,7 @@
     },
 
 
-    "person-converter": {
+    "user-converter": {
         "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
         "values": {
             "convertExpression": "userIdentityIds.has($)"

@@ -6,8 +6,13 @@
             "rawDataPrimaryKeys":["id"],
             "objectMapping": {
                 "rules": {
+                    "idToken": {"<->": "idToken"},
+                    "idTokenClaims": {"<->": "idTokenClaims"},
                     "username": {"<->": "username"},
-                    "session": {"<-": "signInUserSession"},
+                    "sessions": {
+                        "<->": "id",
+                        "converter": {"@": "sessionsConverter"}
+                    },
                     "isAuthenticated": {"<-": "signInUserSession.defined()"},
                     "isMfaEnabled": {"<->": "isSmsMfaEnabled"},
                     "firstName": {"<->": "firstName"},
@@ -20,6 +25,11 @@
                         "<->": "zoneinfo",
                         "converter":  {"@": "timeZoneConverter"}
                     },
+                    "accessTokens": {
+                        "<->": "accessTokenIds",
+                        "converter": {"@": "accessTokensConverter"}
+                    },
+
                     "user": {
                         "<->": "id",
                         "converter": {"@": "user-converter"}
@@ -51,6 +61,20 @@
         "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
         "values": {
             "convertExpression": "userIdentityIds.has($)"
+        }
+    },
+
+    "sessionsConverter": {
+        "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
+        "values": {
+            "convertExpression": "userIdentityId == $"
+        }
+    },
+
+    "accessTokensConverter": {
+        "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
+        "values": {
+            "convertExpression": "$.has(id)"
         }
     }
 

@@ -357,5 +357,9 @@
 
     "WebSocketSessionConnectionMapping": {
         "object": "./mapping/app/web-socket-session-connection-mapping.mjson"
+    },
+
+    "OAuthAccessTokenMapping": {
+        "object": "./mapping/authentication/o-auth-access-token-mapping.mjson"
     }
 }

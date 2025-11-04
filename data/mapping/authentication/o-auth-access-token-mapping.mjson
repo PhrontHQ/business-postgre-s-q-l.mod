@@ -11,9 +11,10 @@
                     "accessToken": {"<->": "accessToken"},
                     "tokenType": {"<->": "tokenType"},
                     "validityDuration": {"<->": "validityDuration"},
-                    "refreshToken": {"<->": "refreshToken || null"},
-                    "refreshTokenValidityDuration": {"<->": "refreshTokenValidityDuration || null"},
-                    "idToken": {"<->": "idToken || null"}
+                    "refreshToken": {"<->": "refreshToken"},
+                    "refreshTokenValidityDuration": {"<->": "refreshTokenValidityDuration"},
+                    "idToken": {"<->": "idToken"},
+                    "scopes": {"<->": "scopes"}
                 }
             },
             "requisitePropertyNames": [

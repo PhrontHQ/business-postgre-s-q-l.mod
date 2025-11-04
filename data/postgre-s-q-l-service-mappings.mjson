@@ -89,6 +89,7 @@
             {"@": "TaskMapping"},
             {"@": "IdentityMapping"},
             {"@": "UserIdentityMapping"},
+            {"@": "OAuthAccessToken"},
             {"@": "UserPoolMapping"},
             {"@": "AppClientMapping"},
             {"@": "WebSocketSessionMapping"},
@@ -425,6 +426,10 @@
 
     "UserIdentityMapping": {
         "object": "./mapping/app/user-identity-mapping.mjson"
+    },
+
+    "OAuthAccessToken": {
+        "object": "./mapping/authentication/o-auth-access-token-mapping.mjson"
     },
 
     "UserPoolMapping": {

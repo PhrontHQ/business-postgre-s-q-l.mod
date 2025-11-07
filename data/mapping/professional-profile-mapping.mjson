@@ -51,7 +51,7 @@
     },
 
     "ProfessionalProfileDescriptor": {
-        "object": "business.mod/data/model/party/person.mjson"
+        "object": "business.mod/data/model/party/profile/professional-profile.mjson"
     },
 
     "ownerConverter": {

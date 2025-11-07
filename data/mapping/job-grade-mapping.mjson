@@ -1,0 +1,53 @@
+{
+    "root": {
+        "prototype": "mod/data/service/expression-data-mapping",
+        "values": {
+            "objectDescriptor": {"@": "JobGradeDescriptor"},
+            "rawDataPrimaryKeys":["id"],
+            "objectMapping": {
+                "rules": {
+                    "name": {"<->": "name"},
+                    "structure": {
+                        "<->": "structureId",
+                        "converter": {"@": "structureConverter"}
+                    },
+                    "structureLevel": {"<->": "structureLevel"},
+                    "compensationRange": {
+                        "<->": "id",
+                        "converter": {"@": "compensationRangeConverter"}
+                    },
+                    "jobs": {
+                        "<->": "id",
+                        "converter": {"@": "jobsConverter"}
+                    }
+               }
+            },
+            "rawDataMapping": {
+                "rules": {
+                }
+            },
+            "requisitePropertyNames": [
+            ]
+        }
+    },
+
+    "JobGradeDescriptor": {
+        "object": "business.mod/data/model/job-grade.mjson"
+    },
+    "structureConverter": {
+        "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
+        "values": {
+            "convertExpression": "id == $"
+        }
+    },
+    "compensationRangeConverter": {
+        "prototype": "postgre-s-q-l.mod/core/converter/number-range-string-to-number-range-converter"
+    },
+    "jobsConverter": {
+        "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
+        "values": {
+            "convertExpression": "jobGradeId == $"
+        }
+    }
+
+}

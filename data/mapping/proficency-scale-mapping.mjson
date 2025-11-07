@@ -2,15 +2,14 @@
     "root": {
         "prototype": "mod/data/service/expression-data-mapping",
         "values": {
-            "objectDescriptor": {"@": "RoleDescriptor"},
+            "objectDescriptor": {"@": "ProficencyScaleDescriptor"},
             "rawDataPrimaryKeys":["id"],
             "objectMapping": {
                 "rules": {
                     "name": {"<->": "name"},
-                    "tags": {"<->": "tags" },
-                    "eventsWithParticipationRole": {
+                    "levels": {
                         "<->": "id",
-                        "converter": {"@": "eventsWithParticipationRoleConverter"}
+                        "converter": {"@": "levelsConverter"}
                     }
                }
             },
@@ -24,13 +23,13 @@
         }
     },
 
-    "RoleDescriptor": {
-        "object": "business.mod/data/model/party/role.mjson"
+    "ProficencyScaleDescriptor": {
+        "object": "business.mod/data/model/party/profile/proficency-scale.mjson"
     },
-    "eventsWithParticipationRoleConverter": {
+    "levelsConverter": {
         "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
         "values": {
-            "convertExpression": "participationRoleIds.has($)"
+            "convertExpression": "scaleId == $"
         }
     }
 

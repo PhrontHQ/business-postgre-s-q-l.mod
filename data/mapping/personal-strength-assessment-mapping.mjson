@@ -1,0 +1,70 @@
+{
+    "root": {
+        "prototype": "mod/data/service/expression-data-mapping",
+        "values": {
+            "objectDescriptor": {"@": "PersonalStrengthAssessmentDescriptor"},
+            "rawDataPrimaryKeys":["id"],
+            "objectMapping": {
+                "rules": {
+                    "person": {
+                        "<->": "personId",
+                        "converter": {"@": "personConverter"}
+                    },
+                    "strength": {
+                        "<->": "strengthId",
+                        "converter": {"@": "strengthConverter"}
+                    },
+                    "selfAssessedRanking": { "<->": "selfAssessedRanking"},
+                    "assessmentQuestionnaires": {
+                        "<->": "assessmentQuestionnaireIds",
+                        "converter": {"@": "assessmentQuestionnairesConverter"}
+                    },
+                    "assessmentRespondentQuestionnaires": {
+                        "<->": "assessmentRespondentQuestionnaireIds",
+                        "converter": {"@": "assessmentRespondentQuestionnairesConverter"}
+                    }
+
+               }
+            },
+            "rawDataMapping": {
+                "rules": {
+                }
+            },
+            "requisitePropertyNames": [
+                "name", "description", "tags"
+            ]
+        }
+    },
+
+    "PersonalStrengthAssessmentDescriptor": {
+        "object": "business.mod/data/model/party/profile/personal-strength-assessment.mjson"
+    },
+
+    "personConverter": {
+        "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
+        "values": {
+            "convertExpression": "id == $"
+        }
+    },
+
+    "strengthConverter": {
+        "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
+        "values": {
+            "convertExpression": "id == $"
+        }
+    },
+
+    "assessmentQuestionnairesConverter": {
+        "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
+        "values": {
+            "convertExpression": "$.has(id)"
+        }
+    },
+
+    "assessmentRespondentQuestionnairesConverter": {
+        "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
+        "values": {
+            "convertExpression": "$.has(id)"
+        }
+    }
+}

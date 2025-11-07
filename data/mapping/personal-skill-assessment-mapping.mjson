@@ -1,0 +1,80 @@
+{
+    "root": {
+        "prototype": "mod/data/service/expression-data-mapping",
+        "values": {
+            "objectDescriptor": {"@": "PersonalSkillAssessmentDescriptor"},
+            "rawDataPrimaryKeys":["id"],
+            "objectMapping": {
+                "rules": {
+                    "person": {
+                        "<->": "personId",
+                        "converter": {"@": "personConverter"}
+                    },
+                    "skill": {
+                        "<->": "skillId",
+                        "converter": {"@": "skillConverter"}
+                    },
+                    "selfAssessedProficencyLevel": {
+                        "<->": "selfAssessedProficencyLevelId",
+                        "converter": {"@": "selfAssessedProficencyLevelConverter"}
+                    },
+                    "assessmentQuestionnaires": {
+                        "<->": "assessmentQuestionnaireIds",
+                        "converter": {"@": "assessmentQuestionnairesConverter"}
+                    },
+                    "assessmentRespondentQuestionnaires": {
+                        "<->": "assessmentRespondentQuestionnaireIds",
+                        "converter": {"@": "assessmentRespondentQuestionnairesConverter"}
+                    }
+
+               }
+            },
+            "rawDataMapping": {
+                "rules": {
+                }
+            },
+            "requisitePropertyNames": [
+                "name", "description", "tags"
+            ]
+        }
+    },
+
+    "PersonalSkillAssessmentDescriptor": {
+        "object": "business.mod/data/model/party/profile/personal-skill-assessment.mjson"
+    },
+
+    "personConverter": {
+        "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
+        "values": {
+            "convertExpression": "id == $"
+        }
+    },
+
+    "skillConverter": {
+        "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
+        "values": {
+            "convertExpression": "id == $"
+        }
+    },
+
+    "selfAssessedProficencyLevelConverter": {
+        "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
+        "values": {
+            "convertExpression": "id == $"
+        }
+    },
+
+    "assessmentQuestionnairesConverter": {
+        "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
+        "values": {
+            "convertExpression": "$.has(id)"
+        }
+    },
+
+    "assessmentRespondentQuestionnairesConverter": {
+        "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
+        "values": {
+            "convertExpression": "$.has(id)"
+        }
+    }
+}

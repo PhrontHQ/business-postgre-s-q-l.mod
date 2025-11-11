@@ -50,7 +50,7 @@
     "connectionsConverter": {
         "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
         "values": {
-            "convertExpression": "webSocketSessionId == $"
+            "convertExpression": "sessionId == $"
         }
     },
     "appConverter": {

@@ -13,7 +13,7 @@
                     },
                     "structureLevel": {"<->": "structureLevel"},
                     "compensationRange": {
-                        "<->": "id",
+                        "<->": "compensationRange",
                         "converter": {"@": "compensationRangeConverter"}
                     },
                     "jobs": {

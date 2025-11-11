@@ -10,9 +10,9 @@
                         "<->":"allowedEmploymentTypeIds",
                         "converter": {"@": "allowedEmploymentTypesConverter"}
                     },
-                    "employer": {
-                        "<->":"employerId",
-                        "converter": {"@": "employerConverter"}
+                    "organization": {
+                        "<->":"organizationId",
+                        "converter": {"@": "organizationConverter"}
                     },
                     "job": {
                         "<->":"jobId",
@@ -37,7 +37,7 @@
                 }
             },
             "requisitePropertyNames": [
-                "allowedEmploymentTypes","employer","position"
+                "allowedEmploymentTypes","organization","position"
             ]
         }
     },
@@ -51,7 +51,7 @@
             "convertExpression": "$.has(id)"
         }
     },
-    "employerConverter": {
+    "organizationConverter": {
         "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
         "values": {
             "convertExpression": "id == $"

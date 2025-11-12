@@ -46,7 +46,7 @@
     "jobsConverter": {
         "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
         "values": {
-            "convertExpression": "jobGradeId == $"
+            "convertExpression": "gradeId == $"
         }
     }
 

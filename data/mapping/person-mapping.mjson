@@ -47,17 +47,35 @@
                         "converter": {"@": "name-converter"}
                     },
                     "preferredLocales": {"<->": "preferredLocales"},
+                    "userIdentities": {
+                        "<->": "userIdentityIds",
+                        "converter": {"@": "userIdentitiesConverter"}
+                    },
+
+
+                    "careerStatement": {"<->": "careerStatement"},
                     "employmentHistory": {
                         "<->": "id",
                         "converter": {"@": "employmentHistoryConverter"}
                     },
+                    "coreStrengthAssessments": {
+                        "<->": "id",
+                        "converter": {"@": "coreStrengthAssessmentsConverter"}
+                    },
+                    "competencies": {"<->": "competencies"},
+                    "skillAssessments": {
+                        "<->": "id",
+                        "converter": {"@": "skillAssessmentsConverter"}
+                    },
+                    "preferredNextRoles": {
+                        "<->": "preferredNextRoleIds",
+                        "converter": {"@": "preferredNextRolesConverter"}
+                    },
+
+
                     "serviceProductVariantsProvided": {
                         "<->": "id",
                         "converter": {"@": "serviceProductVariantsProvidedConverter"}
-                    },
-                    "userIdentities": {
-                        "<->": "userIdentityIds",
-                        "converter": {"@": "userIdentitiesConverter"}
                     },
                     "respondentQuestionnaires": {
                         "<->": "id",
@@ -157,6 +175,13 @@
         }
     },
 
+    "userIdentitiesConverter": {
+        "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
+        "values": {
+            "convertExpression": "$.has(id)"
+        }
+    },
+
     "employmentHistoryConverter": {
         "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
         "values": {
@@ -164,6 +189,28 @@
         }
     },
 
+    "coreStrengthAssessmentsConverter": {
+        "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
+        "values": {
+            "convertExpression": "personId == $"
+        }
+    },
+
+    "skillAssessmentsConverter": {
+        "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
+        "values": {
+            "convertExpression": "personId == $"
+        }
+    },
+
+    "preferredNextRolesConverter": {
+        "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
+        "values": {
+            "convertExpression": "$.has(id)"
+        }
+    },
+
+    
     "serviceProductVariantsProvidedConverter": {
         "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
         "values": {
@@ -171,12 +218,6 @@
         }
     },
 
-    "userIdentitiesConverter": {
-        "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
-        "values": {
-            "convertExpression": "$.has(id)"
-        }
-    },
 
     "respondentQuestionnairesConverter": {
         "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",

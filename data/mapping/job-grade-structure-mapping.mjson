@@ -2,15 +2,14 @@
     "root": {
         "prototype": "mod/data/service/expression-data-mapping",
         "values": {
-            "objectDescriptor": {"@": "RoleDescriptor"},
+            "objectDescriptor": {"@": "JobGradeStructureDescriptor"},
             "rawDataPrimaryKeys":["id"],
             "objectMapping": {
                 "rules": {
                     "name": {"<->": "name"},
-                    "tags": {"<->": "tags" },
-                    "eventsWithParticipationRole": {
+                    "jobGrades": {
                         "<->": "id",
-                        "converter": {"@": "eventsWithParticipationRoleConverter"}
+                        "converter": {"@": "jobGradesConverter"}
                     }
                }
             },
@@ -19,18 +18,17 @@
                 }
             },
             "requisitePropertyNames": [
-                "name", "description", "tags"
             ]
         }
     },
 
-    "RoleDescriptor": {
-        "object": "business.mod/data/model/party/role.mjson"
+    "JobGradeStructureDescriptor": {
+        "object": "business.mod/data/model/job-grade-structure.mjson"
     },
-    "eventsWithParticipationRoleConverter": {
+    "jobGradesConverter": {
         "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
         "values": {
-            "convertExpression": "participationRoleIds.has($)"
+            "convertExpression": "structureId == $"
         }
     }
 

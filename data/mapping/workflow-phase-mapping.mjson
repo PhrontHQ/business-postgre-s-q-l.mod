@@ -2,15 +2,14 @@
     "root": {
         "prototype": "mod/data/service/expression-data-mapping",
         "values": {
-            "objectDescriptor": {"@": "RoleDescriptor"},
+            "objectDescriptor": {"@": "WorkflowPhaseDescriptor"},
             "rawDataPrimaryKeys":["id"],
             "objectMapping": {
                 "rules": {
                     "name": {"<->": "name"},
-                    "tags": {"<->": "tags" },
-                    "eventsWithParticipationRole": {
-                        "<->": "id",
-                        "converter": {"@": "eventsWithParticipationRoleConverter"}
+                    "tasks": {
+                        "<->": "taskIds",
+                        "converter": {"@": "tasksConverter"}
                     }
                }
             },
@@ -24,13 +23,13 @@
         }
     },
 
-    "RoleDescriptor": {
-        "object": "business.mod/data/model/party/role.mjson"
+    "WorkflowPhaseDescriptor": {
+        "object": "business.mod/data/model/workflow-phase.mjson"
     },
-    "eventsWithParticipationRoleConverter": {
+    "tasksConverter": {
         "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
         "values": {
-            "convertExpression": "participationRoleIds.has($)"
+            "convertExpression": "$.has(id)"
         }
     }
 

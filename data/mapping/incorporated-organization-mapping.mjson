@@ -1,0 +1,24 @@
+{
+    "root": {
+        "prototype": "mod/data/service/expression-data-mapping",
+        "values": {
+            "objectDescriptor": {"@": "IncorporatedOrganizationDescriptor"},
+            "rawDataTypeName": "Organization",
+            "rawDataPrimaryKeys":["id"],
+            "objectMapping": {
+                "rules": {
+                }
+            },
+            "rawDataMapping": {
+                "rules": {
+                }
+            }
+        }
+    },
+
+    "IncorporatedOrganizationDescriptor": {
+        "object": "mod/data/model/party/incorporated-organization.mjson"
+    }
+
+
+}

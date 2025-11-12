@@ -28,7 +28,14 @@
             {"@": "serviceProductVariantMapping"},
             {"@": "productVariantPricePairMapping"},
             {"@": "moneyMapping"},
+
             {"@": "organizationMapping"},
+            {"@": "UnregisteredOrganizationMapping"},
+            {"@": "OrganizationRegistrationMapping"},
+            {"@": "RegisteredOrganizationMapping"},
+            {"@": "IncorporatedOrganizationMapping"},
+            {"@": "GovernmentAgencyMapping"},
+            
             {"@": "postalAddressMapping"},
             {"@": "partyPostalAddressMapping"},
             {"@": "partyMapping"},
@@ -66,6 +73,26 @@
             {"@": "orderLineItemMapping"},
             {"@": "orderTransactionMapping"},
             {"@": "jobMapping"},
+            {"@": "JobRoleMapping"},
+            {"@": "WorkflowMapping"},
+            {"@": "WorkflowPhaseMapping"},
+
+            
+            {"@": "JobGradeStructureMapping"},
+            {"@": "JobGradeMapping"},
+            {"@": "JobRoleCollaborationMapping"},
+            {"@": "JobRoleSkillExpectationMapping"},
+            {"@": "JobRoleSkillImportanceScaleMapping"},
+            {"@": "JobRoleSkillImportanceLevelMapping"},
+
+            {"@": "ProfessionalProfileMapping"},
+            {"@": "SkillMapping"},
+            {"@": "ProficencyScaleMapping"},
+            {"@": "ProficencyLevelMapping"},
+            {"@": "PersonalSkillAssessmentMapping"},
+            {"@": "PersonalStrengthMapping"},
+            {"@": "PersonalStrengthAssessmentMapping"},
+
             {"@": "EmploymentPositionMapping"},
             {"@": "EmploymentTypeMapping"},
             {"@": "EmploymentPositionRelationshipMapping"},
@@ -89,6 +116,7 @@
             {"@": "TaskMapping"},
             {"@": "IdentityMapping"},
             {"@": "UserIdentityMapping"},
+            {"@": "OAuthAccessToken"},
             {"@": "UserPoolMapping"},
             {"@": "AppClientMapping"},
             {"@": "WebSocketSessionMapping"},
@@ -207,7 +235,21 @@
     "organizationMapping": {
         "object": "./mapping/organization-mapping.mjson"
     },
-
+    "UnregisteredOrganizationMapping": {
+        "object": "./mapping/unregistered-organization-mapping.mjson"
+    },
+    "RegisteredOrganizationMapping": {
+        "object": "./mapping/registered-organization-mapping.mjson"
+    },
+    "OrganizationRegistrationMapping": {
+        "object": "./mapping/organization-registration-mapping.mjson"
+    },
+    "IncorporatedOrganizationMapping": {
+        "object": "./mapping/incorporated-organization-mapping.mjson"
+    },
+    "GovernmentAgencyMapping": {
+        "object": "./mapping/incorporated-organization-mapping.mjson"
+    },
     "postalAddressMapping": {
         "object": "./mapping/messaging-channel/postal-address-mapping.mjson"
     },
@@ -335,6 +377,62 @@
         "object": "./mapping/job-mapping.mjson"
     },
 
+    "JobRoleMapping": {
+        "object": "./mapping/job-role-mapping.mjson"
+    },
+
+    "WorkflowMapping": {
+        "object": "./mapping/workflow-mapping.mjson"
+    },
+
+    "WorkflowPhaseMapping": {
+        "object": "./mapping/workflow-phase-mapping.mjson"
+    },
+
+
+    "JobGradeStructureMapping": {
+        "object": "./mapping/job-grade-structure-mapping.mjson"
+    },
+    "JobGradeMapping": {
+        "object": "./mapping/job-grade-mapping.mjson"
+    },
+    "JobRoleCollaborationMapping": {
+        "object": "./mapping/job-role-collaboration-mapping.mjson"
+    },
+    "JobRoleSkillExpectationMapping": {
+        "object": "./mapping/job-role-skill-expectation.mjson"
+    },
+    "JobRoleSkillImportanceScaleMapping": {
+        "object": "./mapping/job-role-skill-importance-scale-mapping.mjson"
+    },
+    "JobRoleSkillImportanceLevelMapping": {
+        "object": "./mapping/job-role-skill-importance-level-mapping.mjson"
+    },
+
+
+    "ProfessionalProfileMapping": {
+        "object": "./mapping/professional-profile-mapping.mjson"
+    },
+    "SkillMapping": {
+        "object": "./mapping/skill-mapping.mjson"
+    },
+    "ProficencyScaleMapping": {
+        "object": "./mapping/proficency-scale-mapping.mjson"
+    },
+    "ProficencyLevelMapping": {
+        "object": "./mapping/proficency-level-mapping.mjson"
+    },
+    "PersonalSkillAssessmentMapping": {
+        "object": "./mapping/personal-skill-assessment-mapping.mjson"
+    },
+    "PersonalStrengthMapping": {
+        "object": "./mapping/personal-strength-mapping.mjson"
+    },
+    "PersonalStrengthAssessmentMapping": {
+        "object": "./mapping/personal-strength-assessment-mapping.mjson"
+    },
+
+
     "EmploymentPositionMapping": {
         "object": "./mapping/employment-position-mapping.mjson"
     },
@@ -425,6 +523,10 @@
 
     "UserIdentityMapping": {
         "object": "./mapping/app/user-identity-mapping.mjson"
+    },
+
+    "OAuthAccessToken": {
+        "object": "./mapping/authentication/o-auth-access-token-mapping.mjson"
     },
 
     "UserPoolMapping": {

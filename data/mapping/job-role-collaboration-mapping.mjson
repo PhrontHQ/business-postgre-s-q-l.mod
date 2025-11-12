@@ -1,0 +1,44 @@
+{
+    "root": {
+        "prototype": "mod/data/service/expression-data-mapping",
+        "values": {
+            "objectDescriptor": {"@": "JobRoleCollaborationDescriptor"},
+            "rawDataPrimaryKeys":["id"],
+            "objectMapping": {
+                "rules": {
+                    "jobRole": {
+                        "<->": "jobRoleId",
+                        "converter": {"@": "jobRoleConverter"}
+                    },
+                    "collaboratingParty": {
+                        "<->": "collaboratingPartyId",
+                        "converter": {"@": "collaboratingPartyConverter"}
+                    }
+               }
+            },
+            "rawDataMapping": {
+                "rules": {
+                }
+            },
+            "requisitePropertyNames": [
+            ]
+        }
+    },
+
+    "JobRoleCollaborationDescriptor": {
+        "object": "business.mod/data/model/job-role-collaboration.mjson"
+    },
+    "jobRoleConverter": {
+        "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
+        "values": {
+            "convertExpression": "id == $"
+        }
+    },
+    "collaboratingPartyConverter": {
+        "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
+        "values": {
+            "convertExpression": "id == $"
+        }
+    }
+
+}

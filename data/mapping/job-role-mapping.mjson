@@ -1,0 +1,74 @@
+{
+    "root": {
+        "prototype": "mod/data/service/expression-data-mapping",
+        "values": {
+            "objectDescriptor": {"@": "JobRoleDescriptor"},
+            "rawDataPrimaryKeys":["id"],
+            "objectMapping": {
+                "rules": {
+                    "responsibilities": {"<->": "responsibilities"},
+                    "workflows": {
+                        "<->":"workflowIds",
+                        "converter": {"@": "workflowsConverter"}
+                    },
+                    "processes": {
+                        "<->":"processeIds",
+                        "converter": {"@": "processesConverter"}
+                    },
+                    "collaborations": {
+                        "<->":"id",
+                        "converter": {"@": "collaborationsConverter"}
+                    },
+                    "deliverables": {
+                        "<->":"deliverableIds",
+                        "converter": {"@": "deliverablesConverter"}
+                    },
+                    "skillExpectations": {
+                        "<->":"id",
+                        "converter": {"@": "skillExpectationsConverter"}
+                    }
+               }
+            },
+            "rawDataMapping": {
+                "rules": {
+                }
+            },
+            "requisitePropertyNames": [
+                "existenceTimeRange"
+            ]
+        }
+    },
+    "JobRoleDescriptor": {
+        "object": "business.mod/data/model/job-role.mjson"
+    },
+    "workflowsConverter": {
+        "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
+        "values": {
+            "convertExpression": "$.has(id)"
+        }
+    },
+    "processesConverter": {
+        "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
+        "values": {
+            "convertExpression": "$.has(id)"
+        }
+    },
+    "collaborationsConverter": {
+        "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
+        "values": {
+            "convertExpression": "jobRoleId == $"
+        }
+    },
+    "deliverablesConverter": {
+        "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
+        "values": {
+            "convertExpression": "$.has(id)"
+        }
+    },
+    "skillExpectationsConverter": {
+        "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
+        "values": {
+            "convertExpression": "jobRoleId == $"
+        }
+    }
+}

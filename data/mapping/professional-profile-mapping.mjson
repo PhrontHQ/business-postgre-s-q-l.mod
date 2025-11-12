@@ -1,0 +1,103 @@
+{
+    "root": {
+        "prototype": "mod/data/service/expression-data-mapping",
+        "values": {
+            "objectDescriptor": {"@": "ProfessionalProfileDescriptor"},
+            "rawDataPrimaryKeys":["id"],
+            "objectMapping": {
+                "rules": {
+                    "owner": {
+                        "<->": "ownerId",
+                        "converter": {"@": "ownerConverter"}
+                    },
+                    "careerStatement": {"<->": "careerStatement"},
+                    "employmentHistory": {
+                        "<->": "id",
+                        "converter": {"@": "employmentHistoryConverter"}
+                    },
+                    "coreStrengthAssessments": {
+                        "<->": "id",
+                        "converter": {"@": "coreStrengthAssessmentsConverter"}
+                    },
+                    "competencies": {"<->": "competencies"},
+                    "skillAssessments": {
+                        "<->": "id",
+                        "converter": {"@": "skillAssessmentsConverter"}
+                    },
+                    "preferredNextRoles": {
+                        "<->": "preferredNextRoleIds",
+                        "converter": {"@": "preferredNextRolesConverter"}
+                    },
+                    "url": {
+                        "<->": "url",
+                        "converter": {"@": "urlConverter"}
+                    },
+                    "hostingOrganization": {
+                        "<->": "hostingOrganizationId",
+                        "converter": {"@": "hostingOrganizationConverter"}
+                    }
+
+
+                }
+            },
+            "rawDataMapping": {
+                "rules": {
+                }
+            },
+            "requisitePropertyNames": [
+                "name","firstName","lastName","email","phone","addresses","modificationDate"
+            ]
+        }
+    },
+
+    "ProfessionalProfileDescriptor": {
+        "object": "business.mod/data/model/party/profile/professional-profile.mjson"
+    },
+
+    "ownerConverter": {
+        "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
+        "values": {
+            "convertExpression": "id == $"
+        }
+    },
+
+    "employmentHistoryConverter": {
+        "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
+        "values": {
+            "convertExpression": "employeeId == $"
+        }
+    },
+
+    "coreStrengthAssessmentsConverter": {
+        "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
+        "values": {
+            "convertExpression": "personId == $"
+        }
+    },
+
+    "skillAssessmentsConverter": {
+        "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
+        "values": {
+            "convertExpression": "personId == $"
+        }
+    },
+
+    "preferredNextRolesConverter": {
+        "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
+        "values": {
+            "convertExpression": "$.has(id)"
+        }
+    },
+
+    "urlConverter": {
+        "prototype": "mod/core/converter/string-to-u-r-l-converter"
+    },
+
+    "hostingOrganizationConverter": {
+        "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
+        "values": {
+            "convertExpression": "id == $"
+        }
+    }
+    
+}

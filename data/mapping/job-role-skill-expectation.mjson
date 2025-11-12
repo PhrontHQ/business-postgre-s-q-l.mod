@@ -1,0 +1,54 @@
+{
+    "root": {
+        "prototype": "mod/data/service/expression-data-mapping",
+        "values": {
+            "objectDescriptor": {"@": "JobRoleSkillExpectationDescriptor"},
+            "rawDataPrimaryKeys":["id"],
+            "objectMapping": {
+                "rules": {
+                    "jobRole": {
+                        "<->": "jobRoleId",
+                        "converter": {"@": "jobRoleConverter"}
+                    },
+                    "skill": {
+                        "<->": "skillId",
+                        "converter": {"@": "skillConverter"}
+                    },
+                    "importance": {"<->": "importance"},
+                    "roleHoldeProficiency": {
+                        "<->": "roleHoldeProficiencyId",
+                        "converter": {"@": "roleHoldeProficiencyConverter"}
+                    }
+               }
+            },
+            "rawDataMapping": {
+                "rules": {
+                }
+            },
+            "requisitePropertyNames": [
+            ]
+        }
+    },
+
+    "JobRoleSkillExpectationDescriptor": {
+        "object": "business.mod/data/model/job-role-skill-expectation.mjson"
+    },
+    "jobRoleConverter": {
+        "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
+        "values": {
+            "convertExpression": "id == $"
+        }
+    },
+    "skillConverter": {
+        "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
+        "values": {
+            "convertExpression": "id == $"
+        }
+    },
+    "roleHoldeProficiencyConverter": {
+        "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
+        "values": {
+            "convertExpression": "id == $"
+        }
+    }
+}

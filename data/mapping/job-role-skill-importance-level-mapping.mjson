@@ -2,16 +2,16 @@
     "root": {
         "prototype": "mod/data/service/expression-data-mapping",
         "values": {
-            "objectDescriptor": {"@": "RoleDescriptor"},
+            "objectDescriptor": {"@": "JobRoleSkillImportanceLevelDescriptor"},
             "rawDataPrimaryKeys":["id"],
             "objectMapping": {
                 "rules": {
                     "name": {"<->": "name"},
-                    "tags": {"<->": "tags" },
-                    "eventsWithParticipationRole": {
-                        "<->": "id",
-                        "converter": {"@": "eventsWithParticipationRoleConverter"}
-                    }
+                    "scale": {
+                        "<->": "scaleId",
+                        "converter": {"@": "scaleConverter"}
+                    },
+                    "rank": {"<->": "rank"}
                }
             },
             "rawDataMapping": {
@@ -19,18 +19,17 @@
                 }
             },
             "requisitePropertyNames": [
-                "name", "description", "tags"
             ]
         }
     },
 
-    "RoleDescriptor": {
-        "object": "business.mod/data/model/party/role.mjson"
+    "JobRoleSkillImportanceLevelDescriptor": {
+        "object": "business.mod/data/model/job-role-skill-importance-level.mjson"
     },
-    "eventsWithParticipationRoleConverter": {
+    "scaleConverter": {
         "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
         "values": {
-            "convertExpression": "participationRoleIds.has($)"
+            "convertExpression": "id == $"
         }
     }
 

@@ -6,8 +6,8 @@
             "rawDataPrimaryKeys":["id"],
             "objectMapping": {
                 "rules": {
-                    "name": {
-                        "<->": "name"
+                    "title": {
+                        "<->": "title"
                     },
                     "roles": {
                         "<->":"roleIds",
@@ -16,6 +16,10 @@
                     "employmentPositions": {
                         "<->":"id",
                         "converter": {"@": "employmentPositionsConverter"}
+                    },
+                    "grade": {
+                        "<->":"gradeId",
+                        "converter": {"@": "gradeConverter"}
                     }
                }
             },
@@ -41,6 +45,12 @@
         "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
         "values": {
             "convertExpression": "jobId == $"
+        }
+    },
+    "gradeConverter": {
+        "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
+        "values": {
+            "convertExpression": "id == $"
         }
     }
 

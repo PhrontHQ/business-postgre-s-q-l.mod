@@ -3,17 +3,39 @@
         "prototype": "mod/data/service/expression-data-mapping",
         "values": {
             "objectDescriptor": {"@": "OAuthAccessTokenDescriptor"},
-            "rawDataPrimaryKeys":["accessToken"],
+            "rawDataPrimaryKeys":["id"],
             "objectMapping": {
                 "rules": {
                     "identity": {"<->": "identityId"},
                     "isReadOnly": {"<-": "true"},
                     "accessToken": {"<->": "accessToken"},
                     "tokenType": {"<->": "tokenType"},
+                    "issueDate": {
+                        "<->": "issueDate",
+                        "converter": {"@": "string-to-date-converter"}
+                    },
+                    "expirationDate": {
+                        "<->": "expirationDate",
+                        "converter": {"@": "string-to-date-converter"}
+                    },
                     "validityDuration": {"<->": "validityDuration"},
-                    "refreshToken": {"<->": "refreshToken || null"},
-                    "refreshTokenValidityDuration": {"<->": "refreshTokenValidityDuration || null"},
-                    "idToken": {"<->": "idToken || null"}
+                    "validityRange": {
+                        "<->": "validityRange",
+                        "converter": {"@": "string-to-date-range-converter"}
+                    },
+
+                    "refreshToken": {"<->": "refreshToken"},
+                    "refreshExpirationDate": {
+                        "<->": "refreshExpirationDate",
+                        "converter": {"@": "string-to-date-converter"}
+                    },
+                    "refreshTokenValidityDuration": {"<->": "refreshTokenValidityDuration"},
+                    "refreshValidityDuration": {
+                        "<->": "refreshValidityDuration",
+                        "converter": {"@": "string-to-date-range-converter"}
+                    },
+                    "idToken": {"<->": "idToken"},
+                    "scopes": {"<->": "scopes"}
                 }
             },
             "requisitePropertyNames": [
@@ -35,6 +57,13 @@
         "values": {
             "mutabilityCriteria": "@Criteria.thatEvaluatesToFalse"
           }
+    },
+    "string-to-date-converter": {
+        "prototype": "mod/core/converter/i-s-o-date-string-to-date-converter"
+    },
+    "string-to-date-range-converter": {
+        "prototype": "postgre-s-q-l.mod/core/converter/r-f-c-3339-u-t-c-range-string-to-date-range-converter"
     }
+
 
 }

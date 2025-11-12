@@ -1,0 +1,47 @@
+{
+    "root": {
+        "prototype": "mod/data/service/expression-data-mapping",
+        "values": {
+            "objectDescriptor": {"@": "OrganizationRegistrationDescriptor"},
+            "rawDataPrimaryKeys":["id"],
+            "objectMapping": {
+                "rules": {
+                    "registrarOrganization": {
+                        "<->":"registrarOrganizationId",
+                        "converter": {"@": "registrarOrganizationConverter"}
+                    },
+                    "registrationIdentifier": {
+                        "<->":"registrationIdentifier"
+                    },
+                    "registrantOrganization": {
+                        "<->":"registrantOrganizationId",
+                        "converter": {"@": "registrantOrganizationConverter"}
+                    }
+                }
+            },
+            "rawDataMapping": {
+                "rules": {
+                }
+            },
+            "requisitePropertyNames": [
+            ]
+        }
+    },
+
+    "OrganizationRegistrationDescriptor": {
+        "object": "mod/data/model/party/organization-registration.mjson"
+    },
+    "registrarOrganizationConverter": {
+        "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
+        "values": {
+            "convertExpression": "id == $"
+        }
+    },
+    "registrantOrganizationConverter": {
+        "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
+        "values": {
+            "convertExpression": "id == $"
+        }
+    }
+
+}

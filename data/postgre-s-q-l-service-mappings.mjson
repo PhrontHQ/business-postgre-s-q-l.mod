@@ -28,7 +28,14 @@
             {"@": "serviceProductVariantMapping"},
             {"@": "productVariantPricePairMapping"},
             {"@": "moneyMapping"},
+
             {"@": "organizationMapping"},
+            {"@": "UnregisteredOrganizationMapping"},
+            {"@": "OrganizationRegistrationMapping"},
+            {"@": "RegisteredOrganizationMapping"},
+            {"@": "IncorporatedOrganizationMapping"},
+            {"@": "GovernmentAgencyMapping"},
+            
             {"@": "postalAddressMapping"},
             {"@": "partyPostalAddressMapping"},
             {"@": "partyMapping"},
@@ -228,7 +235,21 @@
     "organizationMapping": {
         "object": "./mapping/organization-mapping.mjson"
     },
-
+    "UnregisteredOrganizationMapping": {
+        "object": "./mapping/unregistered-organization-mapping.mjson"
+    },
+    "RegisteredOrganizationMapping": {
+        "object": "./mapping/registered-organization-mapping.mjson"
+    },
+    "OrganizationRegistrationMapping": {
+        "object": "./mapping/organization-registration-mapping.mjson"
+    },
+    "IncorporatedOrganizationMapping": {
+        "object": "./mapping/incorporated-organization-mapping.mjson"
+    },
+    "GovernmentAgencyMapping": {
+        "object": "./mapping/incorporated-organization-mapping.mjson"
+    },
     "postalAddressMapping": {
         "object": "./mapping/messaging-channel/postal-address-mapping.mjson"
     },
@@ -388,7 +409,7 @@
         "object": "./mapping/job-role-skill-importance-level-mapping.mjson"
     },
 
-    
+
     "ProfessionalProfileMapping": {
         "object": "./mapping/professional-profile-mapping.mjson"
     },

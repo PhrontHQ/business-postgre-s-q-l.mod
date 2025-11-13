@@ -6,6 +6,13 @@
             "rawDataPrimaryKeys":["id"],
             "objectMapping": {
                 "rules": {
+                    "name": {"<->": "name"},
+                    "parent": {
+                        "<->": "parentId",
+                        "converter": {"@": "parentConverter"}
+                    },
+                    "suborganizations": {"<->": "suborganizationIds",
+                                    "converter": {"@": "suborganizationsConverter"}},
                     "postalAddresses": {
                         "<->": "id",
                         "converter": {"@": "postalAddresses-value-converter"}
@@ -34,17 +41,10 @@
                         "<->": "id",
                         "converter": {"@": "calendarsConverter"}
                     },
-                    "name": {"<->": "name"},
                     "type": {
                         "<->": "typeId",
                         "converter": {"@": "typeConverter"}
                     },
-                    "parent": {
-                        "<->": "parentId",
-                        "converter": {"@": "parentConverter"}
-                    },
-                    "suborganizations": {"<->": "suborganizationIds",
-                                    "converter": {"@": "suborganizationsConverter"}},
                     "tags": {"<->": "tags"},
                     "mainContact": {
                         "<->":"mainContactId",

@@ -14,7 +14,7 @@
                         "converter": {"@": "sessionsConverter"}
                     },
                     "isAuthenticated": {"<-": "signInUserSession.defined()"},
-                    "accountConfirmationCode": {"<->": "accountConfirmationCode"},
+                    "accountConfirmationCode": {"<-": "accountConfirmationCode"},
                     "isMfaEnabled": {"<->": "isSmsMfaEnabled"},
                     "firstName": {"<->": "firstName"},
                     "lastName": {"<->": "lastName"},
@@ -39,7 +39,7 @@
             },
             "rawDataMapping": {
                 "rules": {
-                    "confirmationCode": {"<-": "accountConfirmationCode"},
+                    "accountConfirmationCode": {"<-": "accountConfirmationCode"},
                     "password": {"<-": "password"}
                 }
             },

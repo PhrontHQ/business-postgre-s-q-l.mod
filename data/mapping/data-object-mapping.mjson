@@ -36,6 +36,10 @@
                         "<->": "id",
                         "converter": {"@": "templateInstancesConverter"}
                     },
+                    "existenceTimeRange": {
+                        "<->": "existenceTimeRange",
+                        "converter": {"@": "string-to-range-converter"}
+                    },
                     "creationDate": {
                         "<->": "creationDate",
                         "converter": {"@": "string-to-date-converter"}
@@ -104,5 +108,8 @@
         "values": {
             "convertExpression": "typeId == $"
         }
+    },
+    "string-to-range-converter": {
+        "prototype": "postgre-s-q-l.mod/core/converter/r-f-c-3339-u-t-c-range-string-to-date-range-converter"
     }
 }

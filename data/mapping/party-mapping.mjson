@@ -8,10 +8,6 @@
                 "rules": {
                     "name": {"<->": "name"},
                     "aliases": {"<->": "aliases"},
-                    "existenceTimeRange": {
-                        "<->": "existenceTimeRange",
-                        "converter": {"@": "string-to-range-converter"}
-                    },
                     "urlAddresses": {
                         "<->": "urlAddresses"
                     },
@@ -19,7 +15,6 @@
                         "<->": "imageIds",
                         "converter": {"@": "imagesConverter"}
                     }
-
                }
             },
             "rawDataMapping": {
@@ -33,9 +28,6 @@
     },
     "PartyDescriptor": {
         "object": "business.mod/data/model/party/party.mjson"
-    },
-    "string-to-range-converter": {
-        "prototype": "postgre-s-q-l.mod/core/converter/r-f-c-3339-u-t-c-range-string-to-date-range-converter"
     },
     "imagesConverter": {
         "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",

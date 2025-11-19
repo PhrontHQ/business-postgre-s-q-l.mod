@@ -29,10 +29,6 @@
                     "contactForms": {
                         "<->": "contactForms",
                         "converter": {"@": "embedded-value-converter"}
-                    },
-                    "socialProfiles": {
-                        "<->": "socialProfiles",
-                        "converter": {"@": "embedded-value-converter"}
                     }
                 }
             },

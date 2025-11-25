@@ -13,6 +13,8 @@
                     },
                     "suborganizations": {"<->": "suborganizationIds",
                                     "converter": {"@": "suborganizationsConverter"}},
+                    "jobRoles": {"<->": "jobRoleIds",
+                                    "converter": {"@": "jobRolesConverter"}},
                     "postalAddresses": {
                         "<->": "id",
                         "converter": {"@": "postalAddresses-value-converter"}
@@ -157,6 +159,12 @@
     },
 
     "suborganizationsConverter": {
+        "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
+        "values": {
+            "convertExpression": "$.has(id)"
+        }
+    },
+    "jobRolesConverter": {
         "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
         "values": {
             "convertExpression": "$.has(id)"

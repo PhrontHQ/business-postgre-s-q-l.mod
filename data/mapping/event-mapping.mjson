@@ -51,6 +51,7 @@
                         "converter": {"@": "eventURLConverter"}
                     },
                     "summary": {"<->": "summary"},
+                    "participatingPartyNotes": {"<->": "participatingPartyNotes"},
                     "description": {"<->": "description"},
                     "location": {
                         "<->": "locationId",

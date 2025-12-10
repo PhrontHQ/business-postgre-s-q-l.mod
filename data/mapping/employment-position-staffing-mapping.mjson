@@ -50,6 +50,9 @@
                     "b2cCustomerRelationships": {
                         "<->": "id",
                         "converter": {"@": "b2cCustomerRelationshipsConverter"}
+                    },
+                    "achievementsDetails": {
+                        "<->": "achievementsDetails"
                     }
                 }
             },

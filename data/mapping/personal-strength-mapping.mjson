@@ -7,7 +7,7 @@
             "objectMapping": {
                 "rules": {
                     "name": {"<->": "name"},
-                    "personalPersonalStrengthAssessments": {
+                    "personalStrengthAssessments": {
                         "<->": "id",
                         "converter": {"@": "personalStrengthAssessmentsConverter"}
                     }

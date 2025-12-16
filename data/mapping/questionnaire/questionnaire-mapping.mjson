@@ -46,7 +46,7 @@
                 }
             },
             "requisitePropertyNames": [
-                "name", "title", "description","questions","userContextVariables","referrerQuestionnaire","respondentQuestionnaires"
+                "name", "title", "description","userContextVariables","referrerQuestionnaire","respondentQuestionnaires"
             ]
         }
     },

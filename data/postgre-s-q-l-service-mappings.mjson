@@ -80,6 +80,7 @@
             
             {"@": "JobGradeStructureMapping"},
             {"@": "JobGradeMapping"},
+            {"@": "DeliverableMapping"},
             {"@": "JobRoleCollaborationMapping"},
             {"@": "JobRoleSkillExpectationMapping"},
             {"@": "JobRoleSkillImportanceScaleMapping"},
@@ -395,6 +396,9 @@
     },
     "JobGradeMapping": {
         "object": "./mapping/job-grade-mapping.mjson"
+    },
+    "DeliverableMapping": {
+        "object": "./mapping/deliverable-mapping.mjson"
     },
     "JobRoleCollaborationMapping": {
         "object": "./mapping/job-role-collaboration-mapping.mjson"

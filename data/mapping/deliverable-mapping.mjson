@@ -2,7 +2,7 @@
     "root": {
         "prototype": "mod/data/service/expression-data-mapping",
         "values": {
-            "objectDescriptor": {"@": "JobGradeDescriptor"},
+            "objectDescriptor": {"@": "DeliverableDescriptor"},
             "rawDataPrimaryKeys":["id"],
             "objectMapping": {
                 "rules": {
@@ -22,8 +22,8 @@
         }
     },
 
-    "JobGradeDescriptor": {
-        "object": "business.mod/data/model/job-grade.mjson"
+    "DeliverableDescriptor": {
+        "object": "business.mod/data/model/deliverable.mjson"
     },
     "jobRolesConverter": {
         "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",

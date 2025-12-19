@@ -71,7 +71,10 @@
                         "<->": "preferredNextRoleIds",
                         "converter": {"@": "preferredNextRolesConverter"}
                     },
-
+                    "preferredFutureJobs": {
+                        "<->": "preferredFutureJobIds",
+                        "converter": {"@": "preferredFutureJobsConverter"}
+                    },
 
                     "serviceProductVariantsProvided": {
                         "<->": "id",
@@ -209,6 +212,14 @@
             "convertExpression": "$.has(id)"
         }
     },
+
+    "preferredFutureJobsConverter": {
+        "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
+        "values": {
+            "convertExpression": "$.has(id)"
+        }
+    },
+
 
     
     "serviceProductVariantsProvidedConverter": {

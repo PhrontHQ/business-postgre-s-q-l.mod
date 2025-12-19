@@ -28,6 +28,10 @@
                         "<->": "preferredNextRoleIds",
                         "converter": {"@": "preferredNextRolesConverter"}
                     },
+                    "preferredFutureJobs": {
+                        "<->": "preferredFutureJobIds",
+                        "converter": {"@": "preferredFutureJobsConverter"}
+                    },
                     "url": {
                         "<->": "url",
                         "converter": {"@": "urlConverter"}
@@ -83,6 +87,13 @@
     },
 
     "preferredNextRolesConverter": {
+        "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
+        "values": {
+            "convertExpression": "$.has(id)"
+        }
+    },
+
+    "preferredFutureJobsConverter": {
         "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
         "values": {
             "convertExpression": "$.has(id)"

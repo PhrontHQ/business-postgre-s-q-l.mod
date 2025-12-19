@@ -86,6 +86,9 @@
             {"@": "JobRoleSkillImportanceScaleMapping"},
             {"@": "JobRoleSkillImportanceLevelMapping"},
 
+            {"@": "ProcessMapping"},
+            {"@": "ProcessStepMapping"},
+
             {"@": "ProfessionalProfileMapping"},
             {"@": "SkillMapping"},
             {"@": "ProficencyScaleMapping"},
@@ -411,6 +414,13 @@
     },
     "JobRoleSkillImportanceLevelMapping": {
         "object": "./mapping/job-role-skill-importance-level-mapping.mjson"
+    },
+
+    "ProcessMapping": {
+        "object": "./mapping/process-mapping.mjson"
+    },
+    "ProcessStepMapping": {
+        "object": "./mapping/process-step-mapping.mjson"
     },
 
 

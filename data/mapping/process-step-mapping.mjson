@@ -1,0 +1,45 @@
+{
+    "root": {
+        "prototype": "mod/data/service/expression-data-mapping",
+        "values": {
+            "objectDescriptor": {"@": "ProcessStepDescriptor"},
+            "rawDataPrimaryKeys":["id"],
+            "objectMapping": {
+                "rules": {
+                    "name": {"<->": "name"},
+                    "process": {
+                        "<->": "processId",
+                        "converter": {"@": "processConverter"}
+                    },
+                    "tasks": {
+                        "<->": "taskIds",
+                        "converter": {"@": "tasksConverter"}
+                    }
+               }
+            },
+            "rawDataMapping": {
+                "rules": {
+                }
+            },
+            "requisitePropertyNames": [
+            ]
+        }
+    },
+
+    "ProcessStepDescriptor": {
+        "object": "business.mod/data/model/process-step.mjson"
+    },
+    "processConverter": {
+        "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
+        "values": {
+            "convertExpression": "id == $"
+        }
+    },
+    "tasksConverter": {
+        "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
+        "values": {
+            "convertExpression": "$.has(id)"
+        }
+    }
+
+}

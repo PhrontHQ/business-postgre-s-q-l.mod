@@ -1,0 +1,35 @@
+{
+    "root": {
+        "prototype": "mod/data/service/expression-data-mapping",
+        "values": {
+            "objectDescriptor": {"@": "ProcessDescriptor"},
+            "rawDataPrimaryKeys":["id"],
+            "objectMapping": {
+                "rules": {
+                    "name": {"<->": "name"},
+                    "steps": {
+                        "<->": "id",
+                        "converter": {"@": "stepsConverter"}
+                    }
+               }
+            },
+            "rawDataMapping": {
+                "rules": {
+                }
+            },
+            "requisitePropertyNames": [
+            ]
+        }
+    },
+
+    "ProcessDescriptor": {
+        "object": "business.mod/data/model/process.mjson"
+    },
+    "stepsConverter": {
+        "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
+        "values": {
+            "convertExpression": "processId == $"
+        }
+    }
+
+}

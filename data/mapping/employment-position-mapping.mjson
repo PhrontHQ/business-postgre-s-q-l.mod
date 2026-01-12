@@ -23,11 +23,11 @@
                         "converter": {"@": "staffingHistoryConverter"}
                     },
                     "parentPosition": {
-                        "<->":"parentPositionId",
+                        "<->":"id",
                         "converter": {"@": "parentPositionConverter"}
                     },
                     "childPositions": {
-                        "<->":"id",
+                        "<->":"childPositionIds",
                         "converter": {"@": "childPositionsConverter"}
                     },
                     "firstEmploymentPositionRelationships": {
@@ -80,13 +80,13 @@
     "parentPositionConverter": {
         "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
         "values": {
-            "convertExpression": "id == $"
+            "convertExpression": "childPositionIds.has($)"
         }
     },
     "childPositionsConverter": {
         "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
         "values": {
-            "convertExpression": "parentPositionId == $"
+            "convertExpression": "$.has(id)"
         }
     },
     "firstEmploymentPositionRelationshipsConverter": {

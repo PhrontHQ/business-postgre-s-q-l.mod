@@ -89,6 +89,7 @@
             {"@": "ProcessMapping"},
             {"@": "ProcessStepMapping"},
 
+            {"@": "ProfileMapping"},
             {"@": "ProfessionalProfileMapping"},
             {"@": "SkillMapping"},
             {"@": "ProficencyScaleMapping"},
@@ -424,6 +425,9 @@
     },
 
 
+    "ProfileMapping": {
+        "object": "./mapping/profile-mapping.mjson"
+    },
     "ProfessionalProfileMapping": {
         "object": "./mapping/professional-profile-mapping.mjson"
     },

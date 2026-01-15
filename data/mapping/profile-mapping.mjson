@@ -1,0 +1,101 @@
+{
+    "root": {
+        "prototype": "mod/data/service/expression-data-mapping",
+        "values": {
+            "objectDescriptor": {"@": "ProfileDescriptor"},
+            "rawDataPrimaryKeys":["id"],
+            "objectMapping": {
+                "rules": {
+                    "representedParty": {
+                        "<->": "this",
+                        "converter": {"@": "representedPartyForeignKeyConverter"}
+                    },
+                    "hostOrganization": {
+                        "<->": "hostOrganizationId",
+                        "converter": {"@": "hostOrganizationConverter"}
+                    },
+                    "name": {"<->": "name"},
+                    "visualRepresentation": {
+                        "<->": "visualRepresentationId",
+                        "converter": {"@": "visualRepresentationConverter"}
+                    },
+                    "hostUrl": {
+                        "<->": "hostUrl",
+                        "converter": {"@": "hostUrlConverter"}
+                    },
+                    "representedPartyDevices": {
+                        "<->": "representedPartyDeviceIds",
+                        "converter": {"@": "representedPartyDevicesConverter"}
+                    }
+                }
+            },
+            "rawDataMapping": {
+                "rules": {
+                    "representedPersonId": {
+                        "<-": "representedParty",
+                        "reverter": {"@": "representedPartyForeignKeyConverter"}
+                    },
+                    "representedOrganizationId": {
+                        "<-": "representedParty",
+                        "reverter": {"@": "representedPartyForeignKeyConverter"}
+                    }
+                }
+            },
+            "requisitePropertyNames": [
+            ]
+        }
+    },
+
+    "ProfileDescriptor": {
+        "object": "business.mod/data/model/party/profile/profile.mjson"
+    },
+
+    "PersonDescriptor": {
+        "object": "business.mod/data/model/party/person.mjson"
+    },
+    "PersonForeignKeyMapping": {
+        "prototype": "mod/data/service/raw-data-type-mapping",
+        "values": {
+            "type": {"@": "PersonDescriptor"},
+            "expression": "representedPersonId.defined()"
+        }
+    },
+
+    "OrganizationDescriptor": {
+        "object": "business.mod/data/model/party/organization.mjson"
+    },
+    "OrganizationForeignKeyMapping": {
+        "prototype": "mod/data/service/raw-data-type-mapping",
+        "values": {
+            "type": {"@": "OrganizationDescriptor"},
+            "expression": "representedOrganizationId.defined()"
+        }
+    },
+
+    "representedPartyForeignKeyConverter": {
+        "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
+        "values": {
+            "convertExpression": "id == $",
+            "foreignDescriptorMappings": [{"@": "PersonForeignKeyMapping"},{"@": "OrganizationForeignKeyMapping"}]
+        }
+    },
+
+    "hostUrlConverter": {
+        "prototype": "mod/core/converter/string-to-u-r-l-converter"
+    },
+
+    "hostOrganizationConverter": {
+        "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
+        "values": {
+            "convertExpression": "id == $"
+        }
+    },
+
+    "visualRepresentationConverter": {
+        "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
+        "values": {
+            "convertExpression": "id == $"
+        }
+    }
+    
+}

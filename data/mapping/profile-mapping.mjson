@@ -96,6 +96,13 @@
         "values": {
             "convertExpression": "id == $"
         }
+    },
+
+    "representedPartyDevicesConverter": {
+        "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
+        "values": {
+            "convertExpression": "$.has(id)"
+        }
     }
     
 }

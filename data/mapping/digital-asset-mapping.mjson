@@ -6,29 +6,24 @@
             "rawDataPrimaryKeys":["id"],
             "objectMapping": {
                 "rules": {
-                    "storageObjectLocation": {"<->": "storageObjectLocation"},
-                    "originLocation": {"<->": "originLocation"},
-                    "description": {"<->": "description"},
-                    "storageBucketName": {"<-": "storageBucketName"},
-                    "storageBucket": {
-                        "<->": "storageBucketName",
-                        "converter": {"@": "storageBucketForeignKeyConverter"}
-                    },
-                    "storageObjectKey": {"<-": "storageObjectKey"},
-                    "storageObject": {
-                        "<->": "{storageBucketName: storageBucketName, storageObjectKey: storageObjectKey}",
-                        "converter": {"@": "storageObjectForeignKeyConverter"}
+                    "content": {"<->": "content"},
+                    "contentDescription": {"<->": "contentDescription"},
+                    "contentType": {"<->": "contentType"},
+                    "contentLength": {"<->": "contentLength"},
+                    "metadata": {"<->": "metadata"},
+                    "location": {"<->": "location"},
+                    "secureLocation": {"<-": "secureLocation"},
+                    "secureLocationExpirationDate": {
+                        "<->": "secureLocationExpirationDate",
+                        "converter": {"@": "string-to-date-converter"}
                     }
                 }
             },
             "rawDataMapping": {
                 "rules": {
-                    "storageBucketName": {"<-": "storageBucketName.defined() ? storageBucketName : (storageBucket.defined() ? storageBucket.name : null)"},
-                    "storageObjectKey": {"<-": "storageObjectKey.defined() ? storageObjectKey : (storageObject.defined() ? storageObject.key : null)"}
                 }
             },
             "requisitePropertyNames": [
-                "storageBucketName","storageObjectKey","storageObjectLocation","originURL","description"
             ]
         }
     },
@@ -36,16 +31,8 @@
     "DigitalAsset": {
         "object": "mod/data/model/digital-asset.mjson"
     },
-    "storageBucketForeignKeyConverter": {
-        "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
-        "values": {
-            "convertExpression": "storageBucketName == $"
-        }
-    },
-    "storageObjectForeignKeyConverter": {
-        "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
-        "values": {
-            "convertExpression": "storageObjectKey == $.storageObjectKey && storageBucketName == $.storageBucketName"
-        }
+    "string-to-date-converter": {
+        "prototype": "mod/core/converter/i-s-o-date-string-to-date-converter"
     }
+
 }

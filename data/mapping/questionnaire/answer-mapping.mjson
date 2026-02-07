@@ -6,7 +6,7 @@
             "rawDataPrimaryKeys":["id"],
             "objectMapping": {
                 "rules": {
-                    "type": {"<->": "typeModuleId"},
+                    "typeDescriptor": {"<->": "typeDescriptorId"},
                     "name": {"<->": "name"},
                     "booleanValue": {"<->": "booleanValue"},
                     "textValue": {"<->": "textValue"},
@@ -37,7 +37,7 @@
                 }
             },
             "requisitePropertyNames": [
-                "type", "name", "booleanValue", "textValue", "integerValue", "integerRangeValue", "bigIntegerValue", "bigIntegerRangeValue", "decimalValue", "decimalRangeValue", "timeValue", "timeRangeValue", "objectValue"
+                "name", "booleanValue", "textValue", "integerValue", "integerRangeValue", "bigIntegerValue", "bigIntegerRangeValue", "decimalValue", "decimalRangeValue", "timeValue", "timeRangeValue"
             ]
         }
     },

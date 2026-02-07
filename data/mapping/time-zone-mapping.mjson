@@ -5,7 +5,19 @@
             "objectDescriptor": {"@": "TimeZoneDescriptor"},
             "primaryKeyPropertyDescriptors": [
                 {"@": "identifier"}
+            ],
+            "objectMapping": {
+                "rules": {
+                    "identifier": {"<->": "identifier"}
+                }
+            },
+            "rawDataMapping": {
+                "rules": {
+                }
+            },
+            "requisitePropertyNames": [
             ]
+
         }
     },
 
@@ -20,6 +32,5 @@
             "valueType": "string"
         }
     }
-
 
 }

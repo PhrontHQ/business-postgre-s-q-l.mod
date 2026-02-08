@@ -68,7 +68,7 @@
         "object": "mod/data/model/data-object.mjson"
     },
     "string-to-date-converter": {
-        "prototype": "mod/core/converter/i-s-o-date-string-to-date-converter"
+        "prototype": "mod/core/converter/i-s-o-8601-formatted-string-to-date-converter"
     },
     "jsonbConverter": {
         "prototype": "postgre-s-q-l.mod/core/converter/postgresql-jsonb-converter"

@@ -58,7 +58,7 @@
         }
     },
     "string-to-date-converter": {
-        "prototype": "mod/core/converter/i-s-o-date-string-to-date-converter"
+        "prototype": "mod/core/converter/i-s-o-8601-formatted-string-to-date-converter"
     }
 
 }

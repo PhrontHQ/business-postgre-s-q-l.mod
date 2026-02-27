@@ -61,12 +61,7 @@
                         "<->": "colorId",
                         "converter": {"@": "color-converter"}
                    },
-                    "creator": {
-                        "<->": "creator",
-                        "converter": {"@": "event-creator-converter"}
-                    },
                     "isAllDay": {"<->": "isAllDay"},
-                    "endTimeUnspecified": {"<->": "endTimeUnspecified"},
                     "recurrenceRule": {"<->": "recurrenceRule"},
                     "recurringEvent": {"<->": "recurringEventId",
                         "converter": {"@": "recurringEventForeignKeyConverter"}
@@ -77,15 +72,9 @@
                     "rescheduledEventReferrer": {"<->": "id",
                         "converter": {"@": "rescheduledEventReferrerForeignKeyConverter"}
                     },
-                    "originalTimeRange": {
-                        "<->": "originalTimeRange",
-                        "converter": {"@": "string-to-range-converter"}
-                    },
                     "visibility": {"<->": "visibility"},
                     "iCalUID": {"<->": "iCalUID"},
                     "sequence": {"<->": "sequence"},
-                    "attendeesOmitted": {"<->": "attendeesOmitted"},
-                    "extendedProperties": {"<->": "extendedProperties"},
                     "conferenceData": {
                         "<->": "conferenceData",
                         "converter": {"@": "event-conferenceData-converter"}
@@ -255,12 +244,6 @@
 
     "ResourceDescriptor": {
         "object": "business.mod/data/model/resource.mjson"
-    },
-
-    "event-creator-converter": {
-        "prototype": "mod/data/converter/raw-embedded-value-to-object-converter",
-        "values": {
-        }
     },
 
     "recurringEventForeignKeyConverter": {

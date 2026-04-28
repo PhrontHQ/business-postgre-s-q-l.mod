@@ -8,7 +8,7 @@
                 "rules": {
                     "name": {"<->": "name"},
                     "parent": {
-                        "<->": "parentId",
+                        "<->": "id",
                         "converter": {"@": "parentConverter"}
                     },
                     "suborganizations": {"<->": "suborganizationIds",
@@ -154,7 +154,7 @@
     "parentConverter": {
         "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
         "values": {
-            "convertExpression": "id == $"
+            "convertExpression": "suborganizationIds.has($)"
         }
     },
 

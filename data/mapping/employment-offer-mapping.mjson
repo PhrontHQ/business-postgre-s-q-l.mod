@@ -1,0 +1,61 @@
+{
+    "root": {
+        "prototype": "mod/data/service/expression-data-mapping",
+        "values": {
+            "objectDescriptor": {"@": "EmploymentOfferDescriptor"},
+            "rawDataPrimaryKeys":["id"],
+            "objectMapping": {
+                "rules": {
+                    "employmentPosition": {
+                        "<->":"employmentPositionId",
+                        "converter": {"@": "employmentPositionConverter"}
+                    },
+                    "receiptDate": {
+                        "<->": "title",
+                        "converter": {"@": "string-to-date-converter"}
+                    },
+                    "recipient": {
+                        "<->":"recipientId",
+                        "converter": {"@": "personConverter"}
+                    },
+                    "sender": {
+                        "<->":"senderId",
+                        "converter": {"@": "personConverter"}
+                    },
+                    "startDate": {
+                        "<->": "title",
+                        "converter": {"@": "string-to-date-converter"}
+                    } 
+                }
+            },
+            "rawDataMapping": {
+                "rules": {
+                }
+            },
+            "requisitePropertyNames": [
+                "receiptDate", "startDate","employmentPosition","recipient","sender"
+            ]
+        }
+    },
+
+    "EmploymentOfferDescriptor": {
+        "object": "business.mod/data/model/employment-offer.mjson"
+    },
+
+    "string-to-date-converter": {
+        "prototype": "mod/core/converter/i-s-o-8601-formatted-string-to-date-converter"
+    },
+
+    "employmentPositionConverter": {
+        "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
+        "values": {
+            "convertExpression": "id == $"
+        }
+    },
+    "personConverter": {
+        "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
+        "values": {
+            "convertExpression": "id == $"
+        }
+    }
+}

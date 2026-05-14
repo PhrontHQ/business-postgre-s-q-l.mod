@@ -98,6 +98,7 @@
             {"@": "PersonalStrengthMapping"},
             {"@": "PersonalStrengthAssessmentMapping"},
 
+            {"@": "EmploymentOfferMapping"},
             {"@": "EmploymentPositionMapping"},
             {"@": "EmploymentTypeMapping"},
             {"@": "EmploymentPositionRelationshipMapping"},
@@ -450,6 +451,9 @@
         "object": "./mapping/personal-strength-assessment-mapping.mjson"
     },
 
+    "EmploymentOfferMapping": {
+        "object": "./mapping/employment-offer-mapping.mjson"
+    },
 
     "EmploymentPositionMapping": {
         "object": "./mapping/employment-position-mapping.mjson"

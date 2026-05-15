@@ -6,24 +6,36 @@
             "rawDataPrimaryKeys":["id"],
             "objectMapping": {
                 "rules": {
+                    "acceptanceDate": {
+                        "<->":"acceptanceDate",
+                        "converter": {"@": "string-to-date-converter"}
+                    },
                     "employmentPosition": {
                         "<->":"employmentPositionId",
                         "converter": {"@": "employmentPositionConverter"}
                     },
+                    "hiringManager": {
+                        "<->": "hiringManagerId",
+                        "converter": {"@": "personConverter"}
+                    },
+                    "offerDate": {
+                        "<->":"offerDate",
+                        "converter": {"@": "string-to-date-converter"}
+                    },
                     "receiptDate": {
-                        "<->": "title",
+                        "<->": "receiptDate",
                         "converter": {"@": "string-to-date-converter"}
                     },
                     "recipient": {
                         "<->":"recipientId",
                         "converter": {"@": "personConverter"}
                     },
-                    "sender": {
-                        "<->":"senderId",
+                    "recruiter": {
+                        "<->":"recruiterId",
                         "converter": {"@": "personConverter"}
                     },
                     "startDate": {
-                        "<->": "title",
+                        "<->": "startDate",
                         "converter": {"@": "string-to-date-converter"}
                     } 
                 }

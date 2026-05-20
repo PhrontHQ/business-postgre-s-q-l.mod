@@ -37,6 +37,10 @@
                     "secondEmploymentPositionRelationships": {
                         "<->":"id",
                         "converter": {"@": "secondEmploymentPositionRelationshipsConverter"}
+                    },
+                    "employmentOffers": {
+                        "<->":"id",
+                        "converter": {"@": "employmentOffersConverter"}
                     }
                 }
             },
@@ -45,7 +49,7 @@
                 }
             },
             "requisitePropertyNames": [
-                "allowedEmploymentTypes","organization","position"
+                "allowedEmploymentTypes","organization","position", "employmentOffers"
             ]
         }
     },
@@ -99,6 +103,12 @@
         "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
         "values": {
             "convertExpression": "secondEmploymentPositionId == $"
+        }
+    },
+    "employmentOffersConverter": {
+        "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
+        "values": {
+            "convertExpression": "employmentPositionId == $"
         }
     }
 

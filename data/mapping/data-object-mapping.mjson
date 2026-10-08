@@ -44,14 +44,35 @@
                         "<->": "creationDate",
                         "converter": {"@": "string-to-date-converter"}
                     },
+                    "creationIdentity": {
+                        "<->": "creationIdentityId",
+                        "converter": {"@": "creationIdentityConverter"}
+                    },
                     "modificationDate": {
                         "<->": "modificationDate",
                         "converter": {"@": "string-to-date-converter"}
                     },
+                    "modificationIdentity": {
+                        "<->": "modificationIdentityId",
+                        "converter": {"@": "modificationIdentityConverter"}
+                    },
                     "publicationDate": {
                         "<->": "publicationDate",
                         "converter": {"@": "string-to-date-converter"}
+                    },
+                    "publicationIdentity": {
+                        "<->": "publicationIdentityId",
+                        "converter": {"@": "publicationIdentityConverter"}
+                    },
+                    "archivalDate": {
+                        "<->": "archivalDate",
+                        "converter": {"@": "string-to-date-converter"}
+                    },
+                    "archivalIdentity": {
+                        "<->": "archivalIdentityId",
+                        "converter": {"@": "archivalIdentityConverter"}
                     }
+
                 }
             },
             "rawDataMapping": {
@@ -111,5 +132,29 @@
     },
     "string-to-range-converter": {
         "prototype": "mod/core/converter/r-f-c-3339-u-t-c-range-string-to-date-range-converter"
+    },
+    "creationIdentityConverter": {
+        "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
+        "values": {
+            "convertExpression": "id == $"
+        }
+    },
+    "modificationIdentityConverter": {
+        "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
+        "values": {
+            "convertExpression": "id == $"
+        }
+    },
+    "publicationIdentityConverter": {
+        "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
+        "values": {
+            "convertExpression": "id == $"
+        }
+    },
+    "archivalIdentityConverter": {
+        "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
+        "values": {
+            "convertExpression": "id == $"
+        }
     }
 }

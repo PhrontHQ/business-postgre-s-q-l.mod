@@ -1,0 +1,21 @@
+{
+    "root": {
+        "prototype": "mod/data/service/expression-data-mapping",
+        "values": {
+            "objectDescriptor": {"@": "MontageDescriptor"},
+            "objectMapping": {
+                "rules": {
+                    "identifier": {"<->": "identifier"}
+                }
+            },
+            "rawDataMapping": {
+                "rules": {
+                }
+            }
+        }
+    },
+
+    "MontageDescriptor": {
+        "object": "mod/core/montage.mjson"
+    }
+}

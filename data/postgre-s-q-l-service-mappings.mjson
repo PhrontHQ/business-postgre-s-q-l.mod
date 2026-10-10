@@ -3,6 +3,7 @@
         "value": [
             {"@": "TimeZoneMapping"},
             {"@": "DataObjectMapping"},
+            {"@": "MontageMapping"},
             {"@": "digitalAssetMapping"},
             {"@": "collectionMapping"},
             {"@": "countryMapping"},
@@ -136,6 +137,10 @@
 
     "DataObjectMapping": {
         "object": "./mapping/data-object-mapping.mjson"
+    },
+
+    "MontageMapping": {
+        "object": "./mapping/montage-mapping.mjson"
     },
 
     "digitalAssetMapping": {

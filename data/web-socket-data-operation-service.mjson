@@ -110,6 +110,11 @@
         "object": "./mapping/data-object-mapping.mjson"
     },
 
+    "MontageMapping": {
+        "object": "./mapping/montage-mapping.mjson"
+    },
+
+
     "digitalAssetMapping": {
         "object": "./mapping/digital-asset-mapping.mjson"
     },
